@@ -1,6 +1,6 @@
 <div align="center">
 
-![Soft & Wet — manga-inspired homelab cover](assets/soft-and-wet-cover.svg)
+![Soft & Wet — manga-inspired homelab cover](assets/soft-and-wet-cover.webp)
 
 # Soft & Wet
 
