@@ -6,6 +6,8 @@ Esta documentação descreve o **homelab físico realmente implementado**. Separ
 
 ## Máquina, arquitetura e rede
 
+- [Inventário — servidor, estação Ubuntu e cliente Android](hardware.md)
+
 - [Arquitetura, limitações e armazenamento](architecture.md)
 - [Instalação do Debian e Docker](installation.md)
 - [Rede local, Docker, SSH e Tailscale](networking.md)

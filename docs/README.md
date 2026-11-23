@@ -6,6 +6,8 @@ The documents below describe the **current, physically deployed** Soft & Wet hom
 
 ## Host, architecture and network
 
+- [Hardware inventory — server, Ubuntu workstation and Android client](hardware.md)
+
 - [Architecture, constraints and storage](architecture.md)
 - [Debian installation and Docker setup](installation.md)
 - [LAN, Docker bridges, SSH and tailnet](networking.md)

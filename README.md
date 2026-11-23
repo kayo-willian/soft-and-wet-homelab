@@ -1,94 +1,96 @@
 <div align="center">
 
-![Soft & Wet cover](assets/soft-and-wet-cover.svg)
+![Soft & Wet — manga-inspired homelab cover](assets/soft-and-wet-cover.svg)
 
 # Soft & Wet
-### Debian 13 · Self-hosted homelab
 
-[![Português](https://img.shields.io/badge/READ%20IN-PORTUGU%C3%8AS-0D0D0D?style=for-the-badge&labelColor=2F81F7)](README.pt-BR.md)
-[![Status](https://img.shields.io/badge/STATUS-ACTIVE%20LAB-0D0D0D?style=for-the-badge&labelColor=2F81F7)](CHANGELOG.md)
-[![Platform](https://img.shields.io/badge/DEBIAN-13-0D0D0D?style=for-the-badge&logo=debian&logoColor=2F81F7)](https://www.debian.org/)
-[![Docker](https://img.shields.io/badge/DOCKER-COMPOSE-0D0D0D?style=for-the-badge&logo=docker&logoColor=2F81F7)](https://docs.docker.com/compose/)
-[![Access](https://img.shields.io/badge/ACCESS-SSH%20%2B%20TAILSCALE-0D0D0D?style=for-the-badge&logo=tailscale&logoColor=2F81F7)](https://tailscale.com/)
-[![Memory](https://img.shields.io/badge/HOST%20RAM-2%20GB-0D0D0D?style=for-the-badge&labelColor=2F81F7)](docs/measurements.md)
-[![License](https://img.shields.io/badge/LICENSE-MIT-0D0D0D?style=for-the-badge&labelColor=2F81F7)](LICENSE)
+**A real home server built from a nearly obsolete laptop.**
 
-**A personal infrastructure project built on a small, physical notebook — not a packaged application.**
-
-[Architecture](docs/architecture.md) · [Deployment](docs/installation.md) · [Services](docs/services/README.md) · [Troubleshooting](docs/troubleshooting.md) · [Full documentation](docs/README.md)
+[English](README.md) · [Português (Brasil)](README.pt-BR.md) · [Full documentation](docs/README.md)
 
 </div>
 
 ---
 
-## Why I built it
+## The experiment
 
-I want a real server that I can operate from another room, break, troubleshoot and improve — using the hardware I already have. Soft & Wet is my first self-hosted environment. I use it to practice Debian administration, SSH, Docker, networks, file organization and private remote access. I document what actually works, what failed, and what I have not attempted.
+I had a Positivo notebook with **2 GB of RAM**, an Intel Atom processor and roughly **29 GB of internal eMMC**. No spare server, no NAS, no room for heavy virtualization, and no reason to leave another computer occupying my desk.
 
-The name is inspired by **Soft & Wet** from *JoJolion*. The original cover artwork uses a manga-inspired palette, bubbles and the server's small physical footprint.
+Instead of discarding it, I installed **Debian 13 without a graphical environment**, moved it to another room, and started running useful services that I could operate remotely from my main Ubuntu PC and my phone.
 
-## Working implementation
+**The project is about making limited hardware genuinely useful.** Containers, streaming and remote access are ways of testing that idea—not the purpose of the repository. I want to understand the host, measure what each service costs, troubleshoot failures, document the trade-offs, and expand only when the hardware can handle it.
 
-| Component | Actual deployment | Verification |
+The name and artwork take inspiration from *JoJolion*. Like the early experiments, this homelab starts small and leaves room for the unexpected.
+
+## The three devices
+
+| Role | Machine | Important specifications |
 |---|---|---|
-| **Debian 13 / OpenSSH** | Headless Positivo host | Managed remotely from Ubuntu via SSH |
-| **Docker Engine + Compose** | Host runtime | Compose v5.8.0 reported; first container started |
-| **Navidrome** | One Docker container, TCP 4533 | Web UI and ten-track library loaded |
-| **Tailscale** | Native host service + Android app | Music streaming confirmed away from home |
-| **Brasil library** | Ten manually selected songs on internal eMMC | Visible in Navidrome's Songs view |
-| Portainer / Uptime Kuma / Heimdall | Not installed | Future evaluation, subject to RAM/disk limits |
+| **Server — Soft & Wet** | Positivo notebook | Intel Atom x5-Z8350 · **2 GB RAM** · ~29 GB internal eMMC · **Debian 13**, headless |
+| **Administration / file source** | Ubuntu desktop | **Intel Core i7-3770 (4 cores / 8 threads)** · **Intel HD Graphics 4000** · ~16 GB RAM · Ubuntu **26.04.1 LTS** · GNOME 50.1 / Wayland |
+| **Remote mobile client** | Samsung Galaxy A34 5G | **6 GB RAM / 128 GB storage** · 6.6″ Super AMOLED 120 Hz · 5G · 5,000 mAh battery |
 
-<div align="center">
+The desktop is **not** the server; it provides SSH administration, file transfer and browser-based access. The Android phone is a remote client. Full, source-annotated specifications—including the desktop's kernel and disk snapshot—are in [hardware inventory](docs/hardware.md).
 
-### Services and upstream documentation
+## What I actually did
 
-[![Navidrome](https://img.shields.io/badge/NAVIDROME-MUSIC%20SERVER-0D0D0D?style=for-the-badge&labelColor=2F81F7)](https://www.navidrome.org/)
-[![Tailscale](https://img.shields.io/badge/TAILSCALE-PRIVATE%20ACCESS-0D0D0D?style=for-the-badge&logo=tailscale&logoColor=2F81F7)](https://tailscale.com/)
-[![Portainer planned](https://img.shields.io/badge/PORTAINER-PLANNED-0D0D0D?style=for-the-badge&logo=portainer&logoColor=8B99AB)](https://www.portainer.io/)
-[![Uptime Kuma planned](https://img.shields.io/badge/UPTIME%20KUMA-PLANNED-0D0D0D?style=for-the-badge&logo=uptimekuma&logoColor=8B99AB)](https://github.com/louislam/uptime-kuma)
-[![Heimdall planned](https://img.shields.io/badge/HEIMDALL-PLANNED-0D0D0D?style=for-the-badge&logo=linux&logoColor=8B99AB)](https://heimdall.site/)
+| Milestone | Implementation | Evidence |
+|---|---|---|
+| Installed a minimal OS | Debian 13, no desktop environment | Server operational over SSH from another room |
+| Set up remote administration | OpenSSH and standard Linux tools | Managed from Ubuntu |
+| Introduced containers | Docker Engine + Compose | v5.8.0 reported; one service running |
+| Validated a real workload | Navidrome and ten locally stored songs | Browser playback/library confirmed |
+| Tested remote access | Tailscale on Debian and Android | Streaming outside home network confirmed |
+| Captured a baseline | `df`, `free`, `swapon`, `docker stats` | 23G free before apps; 388 MiB host RAM used |
 
-</div>
+Only **one application container** was deployed at the first milestone. **Portainer, Pi-hole, monitoring, dashboards and other tools are part of the intended ecosystem, not a claim that they are already installed.** See the [service registry](docs/services/README.md) for their individual states.
 
-## Physical host
+## Ecosystem and technologies
 
-| Hardware / system | Specification |
-|---|---|
-| Device | Positivo notebook |
-| CPU | Intel Atom x5-Z8350 |
-| RAM | 2 GB physical (~1.8 GiB visible to Linux) |
-| Storage | Internal eMMC only; 27G root filesystem |
-| OS | Debian 13 (Trixie), no desktop |
-| Hostname | `debian` |
-| Management | SSH from an Ubuntu desktop |
-| Containers | Docker Engine with Docker Compose |
-| Remote client | Samsung A34 with Tailscale and a compatible music client |
+These are the technologies **in use or considered for this evolving lab**. The badges are links to the upstream projects, *not completion indicators*. Every badge uses its own color and none labels a component as “planned.”
 
-An external Ventoy USB stick was considered, **then explicitly excluded** from the permanent setup. Media and application data live on internal storage. This is intentionally a small, single-host system.
+[![Debian 13](https://img.shields.io/badge/Debian-13-A81D33?style=flat-square&logo=debian&logoColor=white)](https://www.debian.org/) [![Linux Server](https://img.shields.io/badge/Linux-Server-FCC624?style=flat-square&logo=linux&logoColor=white)](https://kernel.org/) [![Ubuntu 26.04 LTS](https://img.shields.io/badge/Ubuntu-26.04%20LTS-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/) [![Android 5G Client](https://img.shields.io/badge/Android-5G%20Client-3DDC84?style=flat-square&logo=android&logoColor=white)](https://www.android.com/) [![OpenSSH Remote](https://img.shields.io/badge/OpenSSH-Remote-527EA2?style=flat-square)](https://www.openssh.com/)
 
-## Architecture
+[![Docker Engine](https://img.shields.io/badge/Docker-Engine-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/) [![Docker Compose](https://img.shields.io/badge/Docker-Compose-1D63ED?style=flat-square&logo=docker&logoColor=white)](https://docs.docker.com/compose/) [![Portainer CE](https://img.shields.io/badge/Portainer-CE-13BEF9?style=flat-square&logo=portainer&logoColor=white)](https://www.portainer.io/) [![Navidrome Audio](https://img.shields.io/badge/Navidrome-Audio-27AFA2?style=flat-square)](https://www.navidrome.org/) [![Heimdall Dashboard](https://img.shields.io/badge/Heimdall-Dashboard-9B64C6?style=flat-square)](https://heimdall.site/) [![Uptime Kuma Monitoring](https://img.shields.io/badge/Uptime%20Kuma-Monitoring-5CDD8B?style=flat-square)](https://github.com/louislam/uptime-kuma) [![Pi-hole DNS](https://img.shields.io/badge/Pi-hole-DNS-96060C?style=flat-square&logo=pihole&logoColor=white)](https://pi-hole.net/) [![Apache HTTP Server](https://img.shields.io/badge/Apache-HTTP%20Server-D22128?style=flat-square&logo=apache&logoColor=white)](https://httpd.apache.org/)
+
+[![Beszel Metrics](https://img.shields.io/badge/Beszel-Metrics-168A72?style=flat-square)](https://beszel.dev/) [![Dozzle Logs](https://img.shields.io/badge/Dozzle-Logs-8266CF?style=flat-square)](https://dozzle.dev/) [![Tailscale Remote Access](https://img.shields.io/badge/Tailscale-Remote%20Access-252525?style=flat-square&logo=tailscale&logoColor=white)](https://tailscale.com/) [![Samba Files](https://img.shields.io/badge/Samba-Files-087E8B?style=flat-square)](https://www.samba.org/) [![Syncthing Sync](https://img.shields.io/badge/Syncthing-Sync-0891D1?style=flat-square&logo=syncthing&logoColor=white)](https://syncthing.net/) [![Gatus Status](https://img.shields.io/badge/Gatus-Status-CD583D?style=flat-square)](https://github.com/TwiN/gatus) [![SFTP Files](https://img.shields.io/badge/SFTP-Files-758C49?style=flat-square)](https://www.openssh.com/) [![Git Versioning](https://img.shields.io/badge/Git-Versioning-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/) [![Bash Shell](https://img.shields.io/badge/Bash-Shell-4EAA25?style=flat-square&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/) [![rsync Transfer](https://img.shields.io/badge/rsync-Transfer-5C677D?style=flat-square)](https://rsync.samba.org/)
+
+## How the lab is connected
 
 ~~~text
-Ubuntu PC ── SSH / rsync ── home LAN ──┐
-                                      │
-                              Positivo notebook
-                               Debian 13 headless
-                                ├── OpenSSH
-                                ├── Docker Engine
-                                │    └── Docker Compose
-                                │          └── Navidrome :4533
-                                │              ├── /data  (read/write)
-                                │              └── /music (read-only)
-                                └── Tailscale
-                                      ║ private tailnet
-                                      ╚══ Android + music client
+                        HOME NETWORK
+┌────────────────────────┐      SSH, rsync, HTTP    ┌───────────────────────────┐
+│ Ubuntu desktop         │◄───────────────────────►│ Positivo notebook          │
+│ i7-3770 / GNOME        │                          │ Debian 13 · 2 GB RAM      │
+│ operations + media     │                          │ Docker Engine + Compose   │
+└────────────────────────┘                          │ OpenSSH · Tailscale       │
+                                                    │ internal eMMC only       │
+                                                    └────────────┬──────────────┘
+                                                                 │ private tailnet
+                                                                 ▼
+                                                    ┌───────────────────────────┐
+                                                    │ Samsung Galaxy A34 5G     │
+                                                    │ mobile access / playback  │
+                                                    └───────────────────────────┘
 ~~~
 
-Navidrome is the **only deployed application container**. The Compose network is `soft-and-wet_default`. Docker currently binds port 4533 to all host interfaces; private tailnet access does **not** by itself harden the LAN binding. See [security](docs/security.md) for the open issue.
+No Internet-facing port forwarding is needed for the tested remote playback. Container port **4533** is currently published on all host interfaces by Docker; network hardening remains open, and Tailscale does not silently solve that.
 
-## Reproduce the first container
+## Resource budget
 
-On a prepared Debian 13 system with Docker/Compose:
+| Baseline / first observation | Recorded result |
+|---|---|
+| Root filesystem before app deployment | 27G total · 2.0G used · **23G available** |
+| Host RAM before app deployment | ~1.8 GiB visible · **388 MiB used** · ~1.4 GiB available |
+| Swap | 1.5 GiB partition · 0 B used |
+| First Navidrome container reading | **32.51 MiB RAM** · 15.83% CPU at startup (one instant) |
+| External storage | **None** — USB Ventoy idea rejected for permanent operation |
+
+That one container reading is **not** a long-term benchmark. Media, metadata and logs all compete with the system for the same internal space. I measure before adding more software.
+
+## Reproduce and understand
+
+For a Debian host that already has Docker Engine and Compose:
 
 ~~~bash
 git clone https://github.com/kayo-willian/soft-and-wet-homelab.git
@@ -100,63 +102,50 @@ sudo docker compose up -d
 sudo docker compose ps
 ~~~
 
-This reproduces the Navidrome service, **not** the full original Debian installation or the tailnet authentication. No music, private credentials or application database is included. For the host preparation and remote access, follow [installation](docs/installation.md) and [Tailscale](docs/services/tailscale.md).
-
-## Measurements, not marketing
-
-| Captured observation | Value |
-|---|---|
-| Before first app: root filesystem | 27G total / 2.0G used / 23G available |
-| Before first app: RAM | 388 MiB used; ~1.4 GiB available |
-| Swap | 1.5 GiB partition; 0 used at measurement |
-| Navidrome startup memory | 32.51 MiB (single sample) |
-| Navidrome startup CPU | 15.83% (instantaneous, **not** average) |
-
-There are no verified post-library or multi-service benchmarks yet. [Full measurements](docs/measurements.md).
+This recreates **the first documented service**, not an imaginary complete stack. The server's original working directory was `~/soft-and-wet`. The Compose file still reflects the first deployed configuration; the later security improvements and extra services have not been applied.
 
 ## Technical documentation
 
-The documentation mirrors the bilingual, categorized structure of my [Enterprise NOC — From Scratch](https://github.com/kayo-willian/enterprise-noc-from-scratch) project without borrowing its scale or claiming enterprise-level availability.
-
 | Area | English | Português |
 |---|---|---|
-| Documentation index | [Index](docs/README.md) | [Índice](docs/pt-BR/README.md) |
-| Architecture & storage | [Architecture](docs/architecture.md) | [Arquitetura](docs/pt-BR/architecture.md) |
-| Reproduction | [Installation](docs/installation.md) | [Instalação](docs/pt-BR/installation.md) |
-| Services | [Services](docs/services/README.md) | [Serviços](docs/pt-BR/services/README.md) |
-| Networking & remote access | [Networking](docs/networking.md) | [Redes](docs/pt-BR/networking.md) |
-| Operations & backup | [Operations](docs/operations.md) | [Operações](docs/pt-BR/operations.md) |
-| Security | [Security](docs/security.md) | [Segurança](docs/pt-BR/security.md) |
-| Resource evidence | [Measurements](docs/measurements.md) | [Medições](docs/pt-BR/measurements.md) |
-| Music selection | [Music library](docs/music-library.md) | [Biblioteca](docs/pt-BR/music-library.md) |
-| Decisions & failed attempts | [Troubleshooting](docs/troubleshooting.md) | [Solução de problemas](docs/pt-BR/troubleshooting.md) |
-| Future stages | [Roadmap](docs/roadmap.md) | [Evolução](docs/pt-BR/roadmap.md) |
+| Navigation | [Documentation index](docs/README.md) | [Índice técnico](docs/pt-BR/README.md) |
+| Physical devices | [Hardware inventory](docs/hardware.md) | [Inventário](docs/pt-BR/hardware.md) |
+| Host architecture | [Architecture](docs/architecture.md) | [Arquitetura](docs/pt-BR/architecture.md) |
+| Install and reproduce | [Installation](docs/installation.md) | [Instalação](docs/pt-BR/installation.md) |
+| Services and containers | [Service registry](docs/services/README.md) | [Serviços](docs/pt-BR/services/README.md) |
+| Network | [Network and remote access](docs/networking.md) | [Redes](docs/pt-BR/networking.md) |
+| Operations | [Maintenance and backup](docs/operations.md) | [Operação](docs/pt-BR/operations.md) |
+| Security | [Security boundaries](docs/security.md) | [Segurança](docs/pt-BR/security.md) |
+| Measurements | [Real measurements](docs/measurements.md) | [Medições](docs/pt-BR/measurements.md) |
+| Media catalog | [Brasil collection](docs/music-library.md) | [Biblioteca Brasil](docs/pt-BR/music-library.md) |
+| Failures and decisions | [Troubleshooting](docs/troubleshooting.md) | [Solução de problemas](docs/pt-BR/troubleshooting.md) |
 
-## Project evolution
+The detailed pages explain the *why*, *commands used*, *results actually observed* and *remaining limitations*. The files avoid distributing passwords, music, user databases, private IP/MAC addresses or other local data.
 
-This is the **first** stage of an open-ended personal infrastructure series, not six mandatory releases of the same application.
+## What comes next?
 
-**Soft & Wet → Go Beyond → Made in Heaven**
+This is still the beginning. The public names belong to a larger, deliberately unrevealed sequence:
 
-~~~text
-01 soft-and-wet-homelab       | Positivo · Debian 13        | CURRENT
-02 soft-and-wet-plunder       | Positivo · Alpine/OpenRC    | Parallel experiment
-03 soft-and-wet-homelab-v2    | Better notebook            | Conditional
-04 soft-and-wet-homelab-v3    | New hardware/architecture  | Optional
-05 go-beyond                 | i7-3770 recycled as server | Future
-06 made-in-heaven            | Multi-device infrastructure| Long term
-~~~
+<div align="center">
 
-See the [full roadmap](docs/roadmap.md). Future phases have no deadlines or guarantee of implementation.
+**SOFT & WET**  
+↓  
+**PLUNDER**  
+↓  
+**SOFT & WET · V2**  
+↓  
+**SOFT & WET · V3**  
+↓  
+**GO BEYOND**  
+↓  
+**MADE IN HEAVEN**
 
-## Scope and limitations
+*Some stages may never happen. The details stay hidden until there is something real to show.*
 
-- One real machine, no VM and no desktop environment.
-- No film/series automation or continuously attached USB drive.
-- Storage capacity, RAM and backups are explicit constraints.
-- No claim of hardened production security, high availability, successful backups or deployed planned services.
-- Personal music files, Navidrome state, `.env`, secrets and private addresses are not stored in Git.
+</div>
 
-## License
+## Scope and license
 
-MIT — [LICENSE](LICENSE). The license applies to this repository's configuration and documentation, **not** to music files or upstream applications.
+This is a personal technical project—not a software product, commercial service or enterprise environment. No VM, no permanent removable drive, no movie download automation, and no claims of tested backups, hardened public exposure or availability guarantees.
+
+The [MIT license](LICENSE) covers this repository's original documentation and configuration, not third-party software or music files.
