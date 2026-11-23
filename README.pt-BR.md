@@ -6,7 +6,7 @@
 ### Debian 13 · Homelab pessoal
 
 [![English](https://img.shields.io/badge/READ%20IN-ENGLISH-0D0D0D?style=for-the-badge&labelColor=2F81F7)](README.md)
-[![Status](https://img.shields.io/badge/STATUS-LAB%20ATIVO-0D0D0D?style=for-the-badge&labelColor=2F81F7)](CHANGELOG.md)
+[![Status](https://img.shields.io/badge/STATUS-LAB%20ATIVO-0D0D0D?style=for-the-badge&labelColor=2F81F7)](CHANGELOG.pt-BR.md)
 [![Debian](https://img.shields.io/badge/DEBIAN-13-0D0D0D?style=for-the-badge&logo=debian&logoColor=2F81F7)](https://www.debian.org/)
 [![Docker](https://img.shields.io/badge/DOCKER-COMPOSE-0D0D0D?style=for-the-badge&logo=docker&logoColor=2F81F7)](https://docs.docker.com/compose/)
 [![Tailscale](https://img.shields.io/badge/ACESSO-SSH%20%2B%20TAILSCALE-0D0D0D?style=for-the-badge&logo=tailscale&logoColor=2F81F7)](https://tailscale.com/)

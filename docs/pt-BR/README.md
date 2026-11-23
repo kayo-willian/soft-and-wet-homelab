@@ -27,7 +27,7 @@ Esta documentação descreve o **homelab físico realmente implementado**. Separ
 ## Evolução
 
 - [Roadmap completo de seis etapas](roadmap.md)
-- [Histórico de implementação](../../CHANGELOG.md)
-- [Scripts — sem automações implementadas](../../scripts/README.md)
+- [Histórico de implementação](../../CHANGELOG.pt-BR.md)
+- [Scripts — sem automações implementadas](../../scripts/README.pt-BR.md)
 
 A versão em inglês está em [docs](../README.md). Músicas, bancos, endereços privados, senhas e logs não são publicados.
