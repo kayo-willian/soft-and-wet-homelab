@@ -4,6 +4,8 @@
 
 Soft & Wet is a self-hosted lab with a hard resource budget. It runs on a Positivo notebook with an Intel Atom x5-Z8350, 2 GB of physical RAM and a small internal eMMC. The host uses Debian 13 without a graphical desktop; administrative work is performed over SSH.
 
+A full three-device inventory is available in [hardware](hardware.md). The Ubuntu workstation and the Android phone are clients, not additional homelab servers.
+
 ## Deployed topology
 
 ```text

@@ -6,6 +6,8 @@
 
 O Soft & Wet é um homelab self-hosted com orçamento rígido de recursos. Funciona em um notebook Positivo com Intel Atom x5-Z8350, 2 GB físicos de RAM e armazenamento interno eMMC limitado. Usa Debian 13 sem interface gráfica, administrado remotamente por SSH.
 
+O inventário dos três dispositivos está em [hardware](hardware.md). O Ubuntu e o celular são clientes, não servidores adicionais do homelab.
+
 ## Topologia implementada
 
 ~~~text
