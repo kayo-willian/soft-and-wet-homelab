@@ -1,0 +1,39 @@
+# Host-specific configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+private/
+local/
+
+# Application state and personal media
+data/
+music/
+volumes/
+backups/
+exports/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.log
+*.log.*
+*.bak
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python and scripts
+__pycache__/
+*.py[cod]
+.venv/

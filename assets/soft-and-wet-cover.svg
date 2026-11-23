@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 400" role="img" aria-labelledby="title desc">
+<title id="title">Soft &amp; Wet — Homelab</title><desc id="desc">Original manga-inspired blue and pink artwork showing a tiny Debian home server, circular bubbles, and networking lines.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07132c"/><stop offset=".55" stop-color="#123c7c"/><stop offset="1" stop-color="#071b41"/></linearGradient>
+ <linearGradient id="bubble" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffaccd" stop-opacity=".92"/><stop offset=".40" stop-color="#87c5fa" stop-opacity=".65"/><stop offset=".75" stop-color="#162b82" stop-opacity=".6"/><stop offset="1" stop-color="#f3d7bb" stop-opacity=".75"/></linearGradient>
+ <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2.3" fill="#ff9dc9" opacity=".42"/></pattern>
+ <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#7db8e7" opacity=".14"/></pattern>
+ <filter id="shadow"><feDropShadow dx="7" dy="9" stdDeviation="6" flood-color="#020510" flood-opacity=".55"/></filter>
+</defs>
+<rect width="1400" height="400" fill="url(#bg)"/><path d="M0 0H670L290 400H0Z" fill="#122c60"/><path d="M0 80L585 0H730L190 400H0Z" fill="#f5c6d0" opacity=".16"/>
+<path d="M0 310L480 0H550L64 400H0Z" fill="#f4d7b3" opacity=".19"/>
+<rect width="720" height="400" fill="url(#dots)"/><rect x="720" width="680" height="400" fill="url(#grid)"/>
+<g stroke="#f9bbd9" opacity=".48" stroke-width="3" fill="none"><path d="M350 93H582V154H784"/><path d="M492 340H662V269H790"/><circle cx="582" cy="93" r="6" fill="#f9bbd9"/><circle cx="662" cy="340" r="6" fill="#f9bbd9"/></g>
+<g filter="url(#shadow)">
+ <rect x="90" y="125" width="330" height="197" rx="12" fill="#071020" stroke="#f7e9de" stroke-width="8"/>
+ <rect x="109" y="143" width="292" height="161" fill="#154b99"/>
+ <path d="M130 255L155 255L178 223L200 277L220 189L246 238L267 223L291 258L310 204L330 246L354 222L379 251" fill="none" stroke="#ffbbd9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+ <rect x="72" y="321" width="366" height="17" rx="5" fill="#e3d4c9"/>
+ <rect x="450" y="201" width="135" height="145" rx="10" fill="#0b1a35" stroke="#f7e9de" stroke-width="6"/>
+ <rect x="467" y="221" width="100" height="16" rx="3" fill="#347bb6"/><rect x="467" y="249" width="100" height="16" rx="3" fill="#347bb6"/><rect x="467" y="277" width="100" height="16" rx="3" fill="#347bb6"/>
+ <g fill="#8bffc5"><circle cx="478" cy="229" r="4"/><circle cx="478" cy="257" r="4"/><circle cx="478" cy="285" r="4"/></g>
+</g>
+<g fill="url(#bubble)" stroke="#f4d9e0" stroke-width="5">
+ <circle cx="627" cy="92" r="55"/><circle cx="747" cy="327" r="33"/><circle cx="375" cy="72" r="25"/><circle cx="1160" cy="92" r="35"/><circle cx="1300" cy="323" r="19"/>
+</g>
+<g fill="none" stroke="#ffffff" stroke-width="5" opacity=".8"><path d="M603 70A30 30 0 0 1 641 57"/><path d="M731 316A18 18 0 0 1 748 306"/><path d="M1144 83A20 20 0 0 1 1163 74"/></g>
+<text x="800" y="182" fill="#ffcede" font-family="Verdana,Arial,sans-serif" font-weight="900" font-size="73" letter-spacing="6">SOFT &amp; WET</text>
+<path d="M802 204H1325" stroke="#f0d6d0" stroke-width="4"/>
+<text x="806" y="257" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="23" letter-spacing="5">DEBIAN 13  /  DOCKER  /  TAILSCALE</text>
+<text x="807" y="305" fill="#b4dff7" font-family="Arial,sans-serif" font-size="21" letter-spacing="3">A SMALL MACHINE. A REAL HOMELAB.</text>
+<rect x="10" y="10" width="1380" height="380" fill="none" stroke="#f5d9df" stroke-width="3" opacity=".6"/>
+</svg>
