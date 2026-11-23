@@ -1,32 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 400" role="img" aria-labelledby="title desc">
-<title id="title">Soft &amp; Wet — Homelab</title><desc id="desc">Original manga-inspired blue and pink artwork showing a tiny Debian home server, circular bubbles, and networking lines.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 500" role="img" aria-labelledby="title desc">
+<title id="title">SOFT &amp; WET — The homelab experiment</title>
+<desc id="desc">Original cyan-and-magenta halftone manga-inspired artwork with a tiny Debian laptop, Docker containers, huge italic comic title, pop-art speed lines and floating bubbles. No remote-access app branding.</desc>
 <defs>
- <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07132c"/><stop offset=".55" stop-color="#123c7c"/><stop offset="1" stop-color="#071b41"/></linearGradient>
- <linearGradient id="bubble" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffaccd" stop-opacity=".92"/><stop offset=".40" stop-color="#87c5fa" stop-opacity=".65"/><stop offset=".75" stop-color="#162b82" stop-opacity=".6"/><stop offset="1" stop-color="#f3d7bb" stop-opacity=".75"/></linearGradient>
- <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2.3" fill="#ff9dc9" opacity=".42"/></pattern>
- <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#7db8e7" opacity=".14"/></pattern>
- <filter id="shadow"><feDropShadow dx="7" dy="9" stdDeviation="6" flood-color="#020510" flood-opacity=".55"/></filter>
+  <pattern id="dots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="2.6" cy="2.6" r="2.6" fill="#071013"/></pattern>
+  <pattern id="fine" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#071013" opacity=".47"/></pattern>
+  <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M-2 8L8-2M2 10L12 0" stroke="#130c1a" stroke-width="2" opacity=".48"/></pattern>
+  <linearGradient id="soap" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8dc"/><stop offset=".22" stop-color="#ff8cb9"/><stop offset=".5" stop-color="#6b86eb"/><stop offset=".79" stop-color="#08d8d3"/><stop offset="1" stop-color="#f9e0c8"/></linearGradient>
+  <linearGradient id="cream" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdef"/><stop offset=".5" stop-color="#ffe893"/><stop offset="1" stop-color="#f8b82f"/></linearGradient>
+  <linearGradient id="magenta" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff3b99"/><stop offset="1" stop-color="#db0061"/></linearGradient>
 </defs>
-<rect width="1400" height="400" fill="url(#bg)"/><path d="M0 0H670L290 400H0Z" fill="#122c60"/><path d="M0 80L585 0H730L190 400H0Z" fill="#f5c6d0" opacity=".16"/>
-<path d="M0 310L480 0H550L64 400H0Z" fill="#f4d7b3" opacity=".19"/>
-<rect width="720" height="400" fill="url(#dots)"/><rect x="720" width="680" height="400" fill="url(#grid)"/>
-<g stroke="#f9bbd9" opacity=".48" stroke-width="3" fill="none"><path d="M350 93H582V154H784"/><path d="M492 340H662V269H790"/><circle cx="582" cy="93" r="6" fill="#f9bbd9"/><circle cx="662" cy="340" r="6" fill="#f9bbd9"/></g>
-<g filter="url(#shadow)">
- <rect x="90" y="125" width="330" height="197" rx="12" fill="#071020" stroke="#f7e9de" stroke-width="8"/>
- <rect x="109" y="143" width="292" height="161" fill="#154b99"/>
- <path d="M130 255L155 255L178 223L200 277L220 189L246 238L267 223L291 258L310 204L330 246L354 222L379 251" fill="none" stroke="#ffbbd9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
- <rect x="72" y="321" width="366" height="17" rx="5" fill="#e3d4c9"/>
- <rect x="450" y="201" width="135" height="145" rx="10" fill="#0b1a35" stroke="#f7e9de" stroke-width="6"/>
- <rect x="467" y="221" width="100" height="16" rx="3" fill="#347bb6"/><rect x="467" y="249" width="100" height="16" rx="3" fill="#347bb6"/><rect x="467" y="277" width="100" height="16" rx="3" fill="#347bb6"/>
- <g fill="#8bffc5"><circle cx="478" cy="229" r="4"/><circle cx="478" cy="257" r="4"/><circle cx="478" cy="285" r="4"/></g>
+<!-- JoJolion-inspired pop-art atmosphere, entirely new illustration -->
+<rect width="1440" height="500" fill="#28dacc"/>
+<rect width="1440" height="320" fill="url(#dots)" opacity=".72"/>
+<path d="M0 267Q180 231 335 255Q514 303 670 256Q813 224 970 285Q1190 247 1440 261V500H0Z" fill="url(#magenta)"/>
+<path d="M0 294Q177 283 334 316Q566 278 790 314T1440 305V500H0Z" fill="url(#fine)" opacity=".7"/>
+<g fill="#170b1a" stroke="#170b1a" stroke-width="4">
+<path d="M0 340l80-27 66 5 31-20 31 19 46-30 47 42 77-19 47 25 73-30 64 26 89-15 57 27 72-42 61 18 56-36 61 45 76-21 63 32 61-17 72 15v170H0Z" opacity=".73"/>
 </g>
-<g fill="url(#bubble)" stroke="#f4d9e0" stroke-width="5">
- <circle cx="627" cy="92" r="55"/><circle cx="747" cy="327" r="33"/><circle cx="375" cy="72" r="25"/><circle cx="1160" cy="92" r="35"/><circle cx="1300" cy="323" r="19"/>
+<g fill="none" stroke="#190d1d" stroke-width="5" opacity=".55"><path d="M1180 273l-27 227M1271 300l25 200M1350 270l-30 230"/><path d="M1120 316l280-48M1118 344l284-43"/></g>
+<g fill="#f9edcc" stroke="#0e0b1e" stroke-width="6">
+<path d="M-40 0L102 0L-40 149Z"/><path d="M1440 0h-168l168 160Z"/><path d="M151 0l36 0 150 140-15 14z"/>
 </g>
-<g fill="none" stroke="#ffffff" stroke-width="5" opacity=".8"><path d="M603 70A30 30 0 0 1 641 57"/><path d="M731 316A18 18 0 0 1 748 306"/><path d="M1144 83A20 20 0 0 1 1163 74"/></g>
-<text x="800" y="182" fill="#ffcede" font-family="Verdana,Arial,sans-serif" font-weight="900" font-size="73" letter-spacing="6">SOFT &amp; WET</text>
-<path d="M802 204H1325" stroke="#f0d6d0" stroke-width="4"/>
-<text x="806" y="257" fill="#f7f3e9" font-family="Arial,sans-serif" font-size="23" letter-spacing="5">DEBIAN 13  /  DOCKER  /  TAILSCALE</text>
-<text x="807" y="305" fill="#b4dff7" font-family="Arial,sans-serif" font-size="21" letter-spacing="3">A SMALL MACHINE. A REAL HOMELAB.</text>
-<rect x="10" y="10" width="1380" height="380" fill="none" stroke="#f5d9df" stroke-width="3" opacity=".6"/>
+<g opacity=".9" stroke="#101020" stroke-width="4" fill="url(#soap)">
+<circle cx="826" cy="93" r="54"/><circle cx="720" cy="262" r="26"/><circle cx="1304" cy="105" r="29"/><circle cx="1160" cy="410" r="48"/><circle cx="582" cy="70" r="23"/><circle cx="142" cy="97" r="27"/>
+</g>
+<g fill="none" stroke="#fff9e2" stroke-width="8" stroke-linecap="round"><path d="M804 66q22-28 42-14"/><path d="M1145 385q17-19 31-12"/><path d="M1293 96q6-12 14-8"/></g>
+<!-- Positivo laptop / terminal -->
+<g transform="translate(80 126) rotate(-5 240 180)">
+<path d="M62 12L438 12L416 263L40 263Z" fill="#e9e6d9" stroke="#0b0b17" stroke-width="13"/>
+<path d="M88 41L408 41L391 237L71 237Z" fill="#0b1426" stroke="#04040b" stroke-width="6"/>
+<rect x="103" y="51" width="274" height="25" fill="#de126d"/>
+<g stroke="#3adbd4" stroke-width="8"><path d="M105 97h91M105 124h156M105 151h128M105 179h174"/></g>
+<g fill="#44f7a5"><circle cx="337" cy="102" r="8"/><circle cx="337" cy="132" r="8"/><circle cx="337" cy="162" r="8"/></g>
+<path d="M33 263H430L505 319Q500 341 471 345H-30Q-55 343-44 325Z" fill="#fff4d3" stroke="#0b0b17" stroke-width="12"/>
+<path d="M16 283H442L470 310H-9Z" fill="#323542"/>
+<g stroke="#ddd4c8" stroke-width="4" opacity=".7"><path d="M31 289h400M12 304h440M86 281v24M167 281v24M248 281v24M328 281v24"/></g>
+<path d="M183 318H307L297 334H185Z" fill="#94a7ac" stroke="#141220" stroke-width="3"/>
+</g>
+<!-- Dockerized stack drawn as colorful physical building blocks -->
+<g transform="translate(552 303)" stroke="#101020" stroke-width="5">
+<rect x="0" y="44" width="77" height="54" rx="4" fill="#188dca"/>
+<rect x="83" y="44" width="77" height="54" rx="4" fill="#1780c8"/>
+<rect x="166" y="44" width="77" height="54" rx="4" fill="#1165b2"/>
+<rect x="83" y="-14" width="77" height="54" rx="4" fill="#36c3e7"/>
+<path d="M-10 111H261" stroke="#170b1a" stroke-width="9"/>
+</g>
+<!-- Manga typography with chunky print misregistration -->
+<g transform="translate(778 181) skewX(-12)">
+<text x="18" y="22" font-family="Impact,Arial Black,DejaVu Sans,sans-serif" font-weight="900" font-style="italic" font-size="101" letter-spacing="-3" fill="#111019" stroke="#111019" stroke-width="21" paint-order="stroke">SOFT &amp;</text>
+<text x="10" y="12" font-family="Impact,Arial Black,DejaVu Sans,sans-serif" font-weight="900" font-style="italic" font-size="101" letter-spacing="-3" fill="#fa007c" stroke="#111019" stroke-width="15" paint-order="stroke">SOFT &amp;</text>
+<text x="-5" y="-3" font-family="Impact,Arial Black,DejaVu Sans,sans-serif" font-weight="900" font-style="italic" font-size="101" letter-spacing="-3" fill="url(#cream)" stroke="#14101a" stroke-width="7" paint-order="stroke">SOFT &amp;</text>
+<text x="62" y="172" font-family="Impact,Arial Black,DejaVu Sans,sans-serif" font-weight="900" font-style="italic" font-size="153" letter-spacing="-4" fill="#111019" stroke="#111019" stroke-width="26" paint-order="stroke">WET</text>
+<text x="51" y="161" font-family="Impact,Arial Black,DejaVu Sans,sans-serif" font-weight="900" font-style="italic" font-size="153" letter-spacing="-4" fill="#fa007c" stroke="#111019" stroke-width="17" paint-order="stroke">WET</text>
+<text x="39" y="149" font-family="Impact,Arial Black,DejaVu Sans,sans-serif" font-weight="900" font-style="italic" font-size="153" letter-spacing="-4" fill="url(#cream)" stroke="#14101a" stroke-width="9" paint-order="stroke">WET</text>
+</g>
+<g transform="translate(920 427) rotate(-4)">
+<path d="M-16-30H440L421 39H0Z" fill="#101022" stroke="#fff0db" stroke-width="5"/>
+<text x="16" y="15" font-family="DejaVu Sans,Arial,sans-serif" font-weight="900" font-size="24" fill="#23dbc9" letter-spacing="1">DEBIAN 13  •  2 GB  •  HOMELAB</text>
+</g>
+<path d="M10 10H1430V490H10Z" fill="none" stroke="#111019" stroke-width="7"/>
+<path d="M22 22H1418V478H22Z" fill="none" stroke="#ffe4bd" stroke-width="2" opacity=".75"/>
 </svg>
