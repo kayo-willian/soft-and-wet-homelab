@@ -1,18 +1,18 @@
 # Hardware inventory — three roles, one small server
 
-[Português](pt-BR/hardware.md) · [Documentation](README.md)
+[Português (Brasil)](pt-BR/inventario.md) · [Documentation](README.md) · [Home](../README.md)
 
 This inventory records the **devices actually involved** in Soft & Wet. The Positivo is the server. The Ubuntu PC is an administration and file-transfer workstation. The Android device is a remote client. They are not a cluster, and neither of the latter two is a Docker host for this project.
 
 ## 1. Physical server — Positivo
 
 | Component | Recorded value |
-|---|---|
+| --- | --- |
 | Role | **Soft & Wet server** |
 | Device | Positivo notebook |
 | Processor | **Intel Atom x5-Z8350** |
 | Installed RAM | **2 GB** (~1.8 GiB shown by Linux) |
-| Internal storage | ~29 GB advertised; **27G** root filesystem |
+| Internal storage | ~29 GB advertised; **27 GiB** root filesystem |
 | Root block device | `/dev/mmcblk2p2` |
 | Swap partition | `/dev/mmcblk2p3`, **1.5 GiB** |
 | OS | **Debian 13 (Trixie)** without a desktop |
@@ -21,16 +21,16 @@ This inventory records the **devices actually involved** in Soft & Wet. The Posi
 | Application runtime | Docker Engine and **Docker Compose v5.8.0** as reported on first measurement |
 | Persistent media | Internal eMMC only; **no permanently attached Ventoy USB** |
 
-The initial `df -h /` reading showed **27G total, 2.0G used, 23G available**. The first `free -h` sample showed **388 MiB in use and ~1.4 GiB available**; swap usage was zero. Those numbers describe the state **before** the first application container, not the current disk/memory use.
+The initial `df -h /` reading showed **27 GiB total, 2.0 GiB used, 23 GiB available**. The first `free -h` sample showed **388 MiB in use and ~1.4 GiB available**; swap usage was zero. Those numbers describe the state **before** the first application container, not the current disk/memory use.
 
 The design does not assume redundant drives, a UPS, external backup storage or a dedicated graphics accelerator. The machine may be reachable with the lid closed after configuration, but the exact power-management state was not independently verified.
 
 ## 2. Administration workstation — Ubuntu desktop
 
-The workstation's measurements below come from a user-provided `./info.sh`, `ip a`, `df -h /` and `free -h` snapshot dated **2026-11-23**.
+The workstation's measurements below come from a `./info.sh`, `ip a`, `df -h /` and `free -h` snapshot dated **2026-11-23**.
 
 | Component | Captured specification |
-|---|---|
+| --- | --- |
 | Role | SSH administration, browser access, file organization, `rsync` |
 | Processor | **Intel Core i7-3770**, 4 physical cores / **8 threads** |
 | Graphics | **Intel HD Graphics 4000** integrated |
@@ -56,7 +56,7 @@ The different rounding of disk and RAM values reflects different units and comma
 ## 3. Mobile client — Samsung Galaxy A34 5G
 
 | Component | Specification |
-|---|---|
+| --- | --- |
 | Role | Mobile client accessing the self-hosted services |
 | Model | **Samsung Galaxy A34 5G** |
 | Variant owned | **6 GB RAM / 128 GB storage** |
@@ -66,7 +66,7 @@ The different rounding of disk and RAM values reflects different units and comma
 | Network | Wi-Fi and **5G** mobile data |
 | Access tested | Tailscale tailnet + a Navidrome-compatible music application |
 
-The model specifications are supported by [Samsung Mobile Press](https://samsungmobilepress.com/media-assets/galaxy-a34-5g?tab=specs) and [Samsung Newsroom Brazil](https://news.samsung.com/br/samsung-galaxy-a34-5g-esta-disponivel-em-todo-o-brasil). The user's 6/128 GB variant and successful remote audio test were separately reported. An exact Android/One UI version was **not provided** and is not assumed here.
+The model specifications are supported by [Samsung Mobile Press](https://samsungmobilepress.com/media-assets/galaxy-a34-5g?tab=specs) and [Samsung Newsroom Brazil](https://news.samsung.com/br/samsung-galaxy-a34-5g-esta-disponivel-em-todo-o-brasil). My phone is the 6 GB / 128 GB variant. I confirmed remote playback separately from the terminal measurements. An exact Android/One UI version was **not provided** and is not assumed here.
 
 ## Network and publication boundary
 

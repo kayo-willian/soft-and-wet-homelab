@@ -1,20 +1,20 @@
 # Serviços — instalados e planejados
 
-[English](../../services/README.md) · [Índice](../README.md)
+[English](../../services/README.md) · [Documentação](../README.md) · [Início](../../../README.pt-BR.md)
 
 O Soft & Wet é um **projeto pessoal de infraestrutura**, não um pacote de serviços prontos. Tudo precisa funcionar em um Atom x5-Z8350 com 2 GB de RAM e armazenamento eMMC limitado.
 
 | Componente | Camada | Estado | Objetivo |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | [Debian 13](https://www.debian.org/) | Host | Funcionando | Servidor headless administrado por SSH |
 | [OpenSSH](https://www.openssh.com/) | Host | Funcionando | Administração e transferência segura |
 | [Docker Engine](https://docs.docker.com/engine/) + [Compose](https://docs.docker.com/compose/) | Host | Funcionando | Contêineres e configuração reproduzível |
 | [Navidrome](https://www.navidrome.org/) | Contêiner | **Funcionando** | Biblioteca pessoal de músicas |
 | [Tailscale](https://tailscale.com/) | Host + Android | **Funcionando** | Acesso remoto privado sem encaminhamento de portas |
-| [Portainer CE](https://www.portainer.io/) | Contêiner | **Não instalado** | Administração gráfica do Docker; exige cuidado com permissões |
-| [Uptime Kuma](https://github.com/louislam/uptime-kuma) | Contêiner | **Não instalado** | Verificações de disponibilidade |
+| [Portainer CE](https://www.portainer.io/) | Contêiner | **Não instalado** | Administração gráfica que consome RAM e concede acesso privilegiado ao Docker |
+| [Uptime Kuma](https://github.com/louislam/uptime-kuma) | Contêiner | **Não instalado** | Monitoramento de disponibilidade e latência |
 | [Heimdall](https://heimdall.site/) | Contêiner | **Não instalado** | Atalhos para serviços |
-| [Pi-hole](https://pi-hole.net/) | Contêiner | **Não instalado** | DNS local e filtros |
+| [Pi-hole](https://pi-hole.net/) | Contêiner | **Não instalado** | Filtragem de DNS que exige cuidado com a rede |
 | [Apache HTTP Server](https://httpd.apache.org/) | Contêiner se testado | **Não instalado** | Laboratório HTTP/proxy |
 | [Beszel](https://beszel.dev/) | Monitoramento | **Não instalado** | Métricas de CPU/RAM/disco |
 | [Dozzle](https://dozzle.dev/) | Logs | **Não instalado** | Consulta de logs do Docker |
@@ -34,6 +34,6 @@ O Soft & Wet é um **projeto pessoal de infraestrutura**, não um pacote de serv
 
 ## Critério para adicionar serviços
 
-Instalar **um por vez**, medir memória, CPU, espaço, imagens, persistência e portas. Manter apenas o que oferecer utilidade proporcional ao custo.
+Instalar **um por vez**, medir RAM em repouso, CPU em uso, tamanho da imagem e espaço ocupado. Registrar caminhos persistentes e alterações de rede. Manter apenas o que oferecer utilidade proporcional ao custo.
 
-Ver [medições](../measurements.md), [segurança](../security.md) e [operações](../operations.md).
+Ver [medições](../medicoes.md), [segurança](../seguranca.md) e [operações](../operacoes.md).

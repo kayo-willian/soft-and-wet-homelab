@@ -1,5 +1,7 @@
 # Networking
 
+[Português (Brasil)](pt-BR/redes.md) · [Documentation](README.md) · [Home](../README.md)
+
 ## Confirmed layout
 
 The Debian host is on the same home LAN as the Ubuntu desktop. SSH is available for remote administration, and Navidrome can be reached in the browser at `http://<DEBIAN_LAN_IP>:4533`.
@@ -8,7 +10,7 @@ The phone accesses the Debian host via Tailscale using `http://<DEBIAN_TAILSCALE
 
 ## Observed interfaces and bridges
 
-The host reported a LAN address plus Docker bridge addresses for `docker0` and the Compose project network. The Navidrome Compose network was created under the name `soft-and-wet_default`.
+The recorded interface list included the LAN address, IPv6 and Docker bridges for `docker0` and the Compose network `soft-and-wet_default`.
 
 The initial output of `docker compose ps` included:
 
@@ -30,15 +32,20 @@ This means Docker published port 4533 on all IPv4 and IPv6 host interfaces, not 
 ## Checks
 
 ```bash
+cd ~/soft-and-wet
 hostname -I
 ip -br address
 sudo docker network ls
 sudo docker compose ps
 tailscale status
+tailscale ip -4
 ```
 
 ## Caution
 
 Docker-published ports may bypass ordinary UFW traffic filtering. Do not assume that installing UFW alone restricts this container. A dedicated review of host-interface binding and Docker firewall policy is still outstanding.
 
-References: https://docs.docker.com/engine/network/port-publishing/ and https://tailscale.com/docs/concepts/ip-and-dns-addresses
+## Official references
+
+- [Docker port publishing](https://docs.docker.com/engine/network/port-publishing/)
+- [Tailscale IP and DNS addresses](https://tailscale.com/docs/concepts/ip-and-dns-addresses)

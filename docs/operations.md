@@ -1,11 +1,15 @@
 # Operations and maintenance
 
+[Português (Brasil)](pt-BR/operacoes.md) · [Documentation](README.md) · [Home](../README.md)
+
 ## Access
 
-Use SSH from the Ubuntu computer to administer Debian:
+From Ubuntu, replace the example values with the Debian account and LAN address.
 
 ```bash
-ssh kayo@<DEBIAN_LAN_IP>
+DEBIAN_USER=homelab
+DEBIAN_HOST=192.0.2.10
+ssh "${DEBIAN_USER}@${DEBIAN_HOST}"
 ```
 
 The current machine hostname is `debian`. Local hostnames resolve only when the network provides suitable DNS or mDNS configuration; the explicit LAN IP is the reliable fallback.
@@ -37,11 +41,13 @@ The initial file uses `:latest` because that was how the container was first lau
 
 ## Transfer new music
 
-On Ubuntu:
+On Ubuntu, set the example account and documentation-only IP below to your Debian login and LAN address. The remote path is relative to that account’s home directory. Both machines need `rsync`.
 
 ```bash
+DEBIAN_USER=homelab
+DEBIAN_HOST=192.0.2.10
 rsync -avh --progress "$HOME/Músicas/Brasil/" \
-  kayo@<DEBIAN_LAN_IP>:/home/kayo/soft-and-wet/music/Brasil/
+  "${DEBIAN_USER}@${DEBIAN_HOST}:soft-and-wet/music/Brasil/"
 ```
 
 On Debian, inspect usage:
@@ -61,10 +67,13 @@ The exact tools, schedule, destination and restore verification are not recorded
 ## Useful diagnostics
 
 ```bash
+cd ~/soft-and-wet
 sudo systemctl status ssh docker tailscaled
 sudo docker compose ps
 sudo docker compose logs --tail=100 navidrome
 tailscale status
 sudo docker system df
-journalctl -u docker -n 50 --no-pager
+sudo journalctl -u docker -n 50 --no-pager
 ```
+
+For each new service, record resource use, ports, persistent paths, logs and the recovery procedure.

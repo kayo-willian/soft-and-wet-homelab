@@ -1,16 +1,16 @@
 # Arquitetura
 
-[English](../architecture.md) · [Índice](README.md)
+[English](../architecture.md) · [Documentação](README.md) · [Início](../../README.pt-BR.md)
 
 ## Objetivo
 
-O Soft & Wet é um homelab self-hosted com orçamento rígido de recursos. Funciona em um notebook Positivo com Intel Atom x5-Z8350, 2 GB físicos de RAM e armazenamento interno eMMC limitado. Usa Debian 13 sem interface gráfica, administrado remotamente por SSH.
+O Soft & Wet é um laboratório doméstico com recursos limitados. Funciona em um notebook Positivo com Intel Atom x5-Z8350, 2 GB físicos de RAM e armazenamento interno eMMC limitado. Usa Debian 13 sem interface gráfica, administrado remotamente por SSH.
 
-O inventário dos três dispositivos está em [hardware](hardware.md). O Ubuntu e o celular são clientes, não servidores adicionais do homelab.
+O [inventário](inventario.md) reúne as especificações dos três dispositivos. O Ubuntu e o celular são clientes, não servidores adicionais do homelab.
 
 ## Topologia implementada
 
-~~~text
+```text
 Ubuntu (PC principal) ─────────────── rede local ─────────────┐
        SSH / origem das músicas                               │
                                                                v
@@ -34,15 +34,15 @@ Ubuntu (PC principal) ─────────────── rede local �
                                          Rede privada do Tailscale
                                    Debian <================> Android
                                              túnel criptografado
-                                                  player musical
-~~~
+                                                  cliente musical
+```
 
 ## Armazenamento
 
 Sistema operacional, dados do Docker, banco/cache do Navidrome e biblioteca musical ficam no **eMMC interno**. A ideia inicial de usar permanentemente o pendrive Ventoy foi **descartada**.
 
-| Diretório no Debian | Conteúdo | Publicado? |
-|---|---|---|
+| Caminho no Debian | Conteúdo | Publicado? |
+| --- | --- | --- |
 | `~/soft-and-wet/compose.yaml` | Definição da aplicação | Sim, versão reproduzível |
 | `~/soft-and-wet/.env` | UID/GID locais | Não |
 | `~/soft-and-wet/data/navidrome/` | Banco e cache | Não |
@@ -57,9 +57,9 @@ Há **um único contêiner de aplicação**, `navidrome`, na rede `soft-and-wet_
 ## Limites
 
 - Host headless, sem desktop gráfico.
-- Sem VM, sem disco externo permanente e sem automação de filmes.
+- A pouca memória e o espaço limitado no eMMC restringem a biblioteca. O projeto dispensa VMs, disco externo permanente e automação de filmes.
 - Cada novo serviço exige medição de RAM e armazenamento.
 - Sem alta disponibilidade ou comprovação de backup externo.
 - A publicação atual da porta 4533 em todas as interfaces ainda precisa ser revisada.
 
-Veja [medições](measurements.md), [segurança](security.md) e [rede](networking.md).
+Veja [medições](medicoes.md), [segurança](seguranca.md) e [rede](redes.md).

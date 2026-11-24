@@ -1,11 +1,11 @@
 # Services — installed and planned
 
-[Português](../pt-BR/services/README.md) · [Documentation index](../README.md)
+[Português (Brasil)](../pt-BR/servicos/README.md) · [Documentation](../README.md) · [Home](../../README.md)
 
 Soft & Wet is a **personal infrastructure project**, not a bundle of ready-made services. The services below must fit an Atom x5-Z8350, 2 GB of RAM and limited eMMC storage.
 
 | Component | Layer | Status | Why |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | [Debian 13](https://www.debian.org/) | Host OS | Running | Headless, lightweight, managed via SSH |
 | [OpenSSH](https://www.openssh.com/) | Host | Running | Administration and encrypted file transfers |
 | [Docker Engine](https://docs.docker.com/engine/) + [Compose](https://docs.docker.com/compose/) | Host | Running | Application isolation and reproducible configuration |

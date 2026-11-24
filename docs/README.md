@@ -1,13 +1,12 @@
 # Technical documentation
 
-[Português (Brasil)](pt-BR/README.md) · [Project README](../README.md)
+[Português (Brasil)](pt-BR/README.md) · [Documentation](README.md) · [Home](../README.md)
 
 The documents below describe the **current, physically deployed** Soft & Wet homelab. They distinguish terminal observations from suggestions, tests and future ideas.
 
 ## Host, architecture and network
 
 - [Hardware inventory — server, Ubuntu workstation and Android client](hardware.md)
-
 - [Architecture, constraints and storage](architecture.md)
 - [Debian installation and Docker setup](installation.md)
 - [LAN, Docker bridges, SSH and tailnet](networking.md)
@@ -32,4 +31,4 @@ The documents below describe the **current, physically deployed** Soft & Wet hom
 - [Changelog](../CHANGELOG.md)
 - [Scripts — no deployed automation yet](../scripts/README.md)
 
-The full Portuguese translation is maintained in [docs/pt-BR](pt-BR/README.md). Personal media, databases, IP addresses, credentials and logs are not included.
+Personal media, databases, private addresses, credentials and logs stay outside the repository.

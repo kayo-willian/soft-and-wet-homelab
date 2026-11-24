@@ -1,13 +1,13 @@
 # Biblioteca musical — Brasil
 
-[English](../music-library.md) · [Índice](README.md)
+[English](../music-library.md) · [Documentação](README.md) · [Início](../../README.pt-BR.md)
 
 ## Primeira seleção
 
 A primeira coleção contém **dez faixas** escolhidas manualmente de uma playlist pessoal do Spotify chamada **Brasil**. A seleção mistura MPB, samba, bossa nova e outros estilos. O Spotify **não foi a origem dos arquivos transferidos para o Navidrome**: o servidor utiliza arquivos locais. Não houve registro verificável da origem/licenciamento individual de cada download.
 
 | Nº | Música | Artista(s) |
-|---:|---|---|
+| ---: | --- | --- |
 | 01 | Carolina, Carol Bela | Toquinho; Jorge Ben Jor |
 | 02 | Onde Anda Você | Toquinho; Vinicius de Moraes |
 | 03 | Meu Rio | Toco |
@@ -27,7 +27,7 @@ Origem no Ubuntu: `~/Músicas/Brasil/`. Destino no Debian: `~/soft-and-wet/music
 
 Convenção de nomes sugerida:
 
-~~~text
+```text
 01 - Carolina, Carol Bela - Toquinho & Jorge Ben Jor.mp3
 02 - Onde Anda Você - Toquinho & Vinicius de Moraes.mp3
 03 - Meu Rio - Toco.mp3
@@ -38,20 +38,22 @@ Convenção de nomes sugerida:
 08 - Chove Chuva - Jorge Ben Jor.mp3
 09 - Bis - Arthur Verocai & Azymuth.mp3
 10 - Corre pra Ver - Joca Perpignan & Denise Reis.mp3
-~~~
+```
 
 As extensões são **exemplos**: manter o formato real de cada arquivo. Não houve auditoria dos nomes finais em disco.
 
-## Transferência realizada
+## Como reproduzir a transferência
 
-Executar **no Ubuntu**:
+No Ubuntu, substitua a conta e o IP de exemplo abaixo pelo login e pelo endereço do Debian na LAN. O caminho remoto parte da pasta pessoal dessa conta. As duas máquinas precisam de `rsync`.
 
-~~~bash
+```bash
+DEBIAN_USER=homelab
+DEBIAN_HOST=192.0.2.10
 rsync -avh --progress "$HOME/Músicas/Brasil/" \
-  kayo@<DEBIAN_LAN_IP>:/home/kayo/soft-and-wet/music/Brasil/
-~~~
+  "${DEBIAN_USER}@${DEBIAN_HOST}:soft-and-wet/music/Brasil/"
+```
 
-O `rsync` preserva os arquivos originais. Se forem renomeados no Ubuntu, as cópias com nomes antigos podem permanecer no Debian; conferir antes de remover.
+O `rsync` mantém a origem no Ubuntu e atualiza arquivos no mesmo caminho no Debian. Se forem renomeados no Ubuntu, as cópias com nomes antigos podem permanecer no Debian; conferir antes de remover.
 
 ## Apresentação no Navidrome
 

@@ -1,6 +1,6 @@
 # Histórico — Soft & Wet
 
-[English](CHANGELOG.md) · [README em português](README.pt-BR.md)
+[English](CHANGELOG.md) · [Documentação](docs/pt-BR/README.md) · [Início](README.pt-BR.md)
 
 Registro das etapas **efetivamente realizadas**, sem apresentar serviços planejados como instalados.
 
@@ -11,10 +11,10 @@ Registro das etapas **efetivamente realizadas**, sem apresentar serviços planej
 - Medi memória, swap e armazenamento antes de iniciar serviços de aplicação.
 - Criei `~/soft-and-wet`, `compose.yaml`, `.env` com UID/GID e `.gitignore`.
 - Baixei `navidrome/navidrome:latest` e iniciei um contêiner na rede `soft-and-wet_default`.
-- Acessei a interface inicial do Navidrome na porta 4533 e configurei a conta administrativa.
-- Transferi dez músicas da coleção **Brasil**, organizadas em uma pasta própria.
+- Acessei a interface inicial do Navidrome na porta TCP 4533 e configurei a conta administrativa.
+- Transferi dez músicas da coleção **Brasil**, organizadas em uma pasta própria, e as vi na biblioteca do Navidrome.
 - Encontrei `Unknown Album` em algumas faixas e experimentei o MusicBrainz Picard. Preferi utilizar a seção **Músicas** sem alterar metadados não comprovados.
-- Instalei e autentiquei o Tailscale no Debian e no Samsung A34 e confirmei o acesso remoto ao Navidrome.
+- Instalei e autentiquei o Tailscale no Debian e no Samsung A34. Depois, confirmei a reprodução remota no celular.
 
 ## Pendências
 
@@ -24,4 +24,8 @@ Registro das etapas **efetivamente realizadas**, sem apresentar serviços planej
 - Medições prolongadas de consumo após a biblioteca de músicas.
 - Scripts próprios de automação, ainda não implementados.
 
-Para contexto técnico, consulte [instalação](docs/pt-BR/installation.md), [solução de problemas](docs/pt-BR/troubleshooting.md) e [roadmap](docs/pt-BR/roadmap.md).
+Para contexto técnico, consulte [instalação](docs/pt-BR/instalacao.md), [solução de problemas](docs/pt-BR/solucao-de-problemas.md) e [planejamento](docs/pt-BR/planejamento.md).
+
+## Alterações na documentação
+
+- Os arquivos em português receberam nomes localizados. Cada página passou a ter links para a tradução, o índice e o README do projeto.

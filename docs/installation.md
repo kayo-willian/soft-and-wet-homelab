@@ -1,12 +1,14 @@
 # Installation and preparation
 
-> **Evidence boundary:** The steps below reconstruct the setup instructions used for this project. The user confirmed installation of the tools and Docker, but a complete original shell history was not preserved. Commands explicitly observed in the terminal are distinguished in the verification section.
+[Português (Brasil)](pt-BR/instalacao.md) · [Documentation](README.md) · [Home](../README.md)
+
+> I installed the tools and Docker on the Positivo. The full shell history was not retained. The package and Docker setup steps below reconstruct the procedure. The verification section identifies commands captured in the terminal.
 
 ## 1. Debian 13 base system
 
-Install Debian 13 (Trixie) on the Positivo notebook without a desktop environment. Enable an SSH server and standard system utilities during setup, or install OpenSSH afterward. The installed host is named `debian` and is operated in another room over the LAN.
+I installed Debian 13 (Trixie) without a desktop. The recommended installer tasks were **SSH server** and **standard system utilities**. If SSH was omitted, install OpenSSH on the host as shown below. The host is named `debian` and is administered over the LAN from the Ubuntu workstation in another room.
 
-The initial package set was provided as:
+The following commands assume the Debian account already has sudo access. Review pending upgrades before accepting them with `-y`.
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -20,9 +22,11 @@ sudo systemctl enable --now ssh
 
 This is a **reproducible package list**, not proof that every optional package or service was audited individually. No claim is made that UFW or Fail2ban has been configured or enabled.
 
+For a smaller installation, I also considered `--no-install-recommends` with `openssh-server git curl ca-certificates htop nano`. I used the fuller package list above.
+
 ## 2. Docker Engine and Compose plugin
 
-The previously supplied Docker installation procedure used the official Debian package repository:
+The setup used Docker’s official Debian repository. On a new host, check the official instructions below for prerequisites and conflicting packages. The following block writes the key and repository definition to the indicated paths.
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -45,7 +49,7 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io \
 sudo systemctl enable --now docker
 ```
 
-The following checks were observed later in the user's terminal:
+The terminal record includes these checks:
 
 ```bash
 sudo docker system df
@@ -56,7 +60,7 @@ The actual reported Compose version was `v5.8.0`. Docker was nearly empty at the
 
 ## 3. Project directory
 
-The actual commands used for the first application were:
+These are the historical commands from the first deployment, run in a new directory. The two redirections overwrite `.env` and `.gitignore`. For a fresh clone, use the [project README](../README.md) and keep its existing ignore rules.
 
 ```bash
 mkdir -p ~/soft-and-wet/{data/navidrome,music,docs,scripts}
@@ -66,11 +70,11 @@ printf 'HOST_UID=%s\nHOST_GID=%s\n' "$(id -u)" "$(id -g)" > .env
 printf '.env\ndata/\nmusic/\n' > .gitignore
 ```
 
-The initial `.gitignore` was later expanded for publication; see the top-level repository file. The root folder on the Debian machine (`soft-and-wet`) and the GitHub repository name (`soft-and-wet-homelab`) are intentionally different.
+The initial `.gitignore` was later expanded for publication; see the [root ignore rules](../.gitignore). The root folder on the Debian machine (`soft-and-wet`) and the GitHub repository name (`soft-and-wet-homelab`) are intentionally different.
 
 ## 4. Start the first container
 
-Place the repository's `compose.yaml` in `~/soft-and-wet` and use the generated `.env` from the previous step:
+Place the repository's [compose.yaml](../compose.yaml) in `~/soft-and-wet` and use the generated `.env` from the previous step:
 
 ```bash
 cd ~/soft-and-wet
@@ -81,10 +85,17 @@ sudo docker stats --no-stream
 
 The observed startup pulled `navidrome/navidrome:latest`, created network `soft-and-wet_default`, and started a single `navidrome` container.
 
-## 5. Next reading
+## 5. Scope of the first installation
+
+The host stayed headless, with no Apache installation or permanent USB drive. The 1.5 GiB swap partition was left as installed. Navidrome was the only application container. Portainer, Uptime Kuma and Heimdall remained candidates.
+
+## Next steps
 
 - [Navidrome deployment](services/navidrome.md)
-- [Music transfer](music-library.md)
-- [Tailscale](services/tailscale.md)
+- [Transfer the music library](music-library.md)
+- [Connect Android through Tailscale](services/tailscale.md)
 
-References: [Docker on Debian](https://docs.docker.com/engine/install/debian/) and [Navidrome Docker installation](https://www.navidrome.org/docs/installation/docker/).
+## Official references
+
+- [Install Docker Engine on Debian](https://docs.docker.com/engine/install/debian/)
+- [Install Navidrome with Docker](https://www.navidrome.org/docs/installation/docker/)

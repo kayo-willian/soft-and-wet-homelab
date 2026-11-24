@@ -4,19 +4,22 @@
 
 # Soft & Wet
 
+[English](README.md) · [Documentação](docs/pt-BR/README.md) · [Início](README.pt-BR.md)
+
 **Um servidor doméstico real construído com um notebook praticamente obsoleto.**
 
-[![Idioma Português (Brasil)](https://img.shields.io/static/v1?label=Idioma&message=Portugu%C3%AAs%20(Brasil)&color=229953&style=flat-square&labelColor=161B22)](README.pt-BR.md) [![Language English](https://img.shields.io/static/v1?label=Language&message=English&color=0969DA&style=flat-square&labelColor=161B22)](README.md) [![Docs Documentação](https://img.shields.io/static/v1?label=Docs&message=Documenta%C3%A7%C3%A3o&color=775CC7&style=flat-square&labelColor=161B22)](docs/pt-BR/README.md) [![Licença MIT](https://img.shields.io/static/v1?label=Licen%C3%A7a&message=MIT&color=A0A0A0&style=flat-square&labelColor=161B22)](LICENSE)
+[![Licença MIT](https://img.shields.io/static/v1?label=Licen%C3%A7a&message=MIT&color=A0A0A0&style=flat-square&labelColor=161B22)](LICENSE)
 
-[![Debian 13](https://img.shields.io/static/v1?label=Debian&message=13&color=A81D33&style=flat-square&labelColor=161B22&logo=debian&logoColor=white)](https://www.debian.org/) [![Linux Server](https://img.shields.io/static/v1?label=Linux&message=Server&color=D6B400&style=flat-square&labelColor=161B22&logo=linux&logoColor=white)](https://kernel.org/) [![Ubuntu 26.04 LTS](https://img.shields.io/static/v1?label=Ubuntu&message=26.04%20LTS&color=E95420&style=flat-square&labelColor=161B22&logo=ubuntu&logoColor=white)](https://ubuntu.com/) [![Android Client](https://img.shields.io/static/v1?label=Android&message=Client&color=3DDC84&style=flat-square&labelColor=161B22&logo=android&logoColor=white)](https://www.android.com/) [![OpenSSH Remote](https://img.shields.io/static/v1?label=OpenSSH&message=Remote&color=527EA2&style=flat-square&labelColor=161B22)](https://www.openssh.com/)
+**Em uso no laboratório**
 
-[![Docker Engine](https://img.shields.io/static/v1?label=Docker&message=Engine&color=2496ED&style=flat-square&labelColor=161B22&logo=docker&logoColor=white)](https://www.docker.com/) [![Docker Compose](https://img.shields.io/static/v1?label=Docker&message=Compose&color=1D63ED&style=flat-square&labelColor=161B22&logo=docker&logoColor=white)](https://docs.docker.com/compose/) [![Portainer CE](https://img.shields.io/static/v1?label=Portainer&message=CE&color=13BEF9&style=flat-square&labelColor=161B22)](https://www.portainer.io/) [![Navidrome Audio](https://img.shields.io/static/v1?label=Navidrome&message=Audio&color=27AFA2&style=flat-square&labelColor=161B22)](https://www.navidrome.org/) [![Heimdall Dashboard](https://img.shields.io/static/v1?label=Heimdall&message=Dashboard&color=9B64C6&style=flat-square&labelColor=161B22)](https://heimdall.site/) [![Uptime Kuma Monitoring](https://img.shields.io/static/v1?label=Uptime%20Kuma&message=Monitoring&color=4ABF76&style=flat-square&labelColor=161B22)](https://github.com/louislam/uptime-kuma) [![Pi-hole DNS](https://img.shields.io/static/v1?label=Pi-hole&message=DNS&color=96060C&style=flat-square&labelColor=161B22)](https://pi-hole.net/) [![Apache HTTP Server](https://img.shields.io/static/v1?label=Apache&message=HTTP%20Server&color=D22128&style=flat-square&labelColor=161B22&logo=apache&logoColor=white)](https://httpd.apache.org/)
+[![Debian 13](https://img.shields.io/static/v1?label=Debian&message=13&color=A81D33&style=flat-square&labelColor=161B22&logo=debian&logoColor=white)](https://www.debian.org/) [![Linux Servidor](https://img.shields.io/static/v1?label=Linux&message=Servidor&color=D6B400&style=flat-square&labelColor=161B22&logo=linux&logoColor=white)](https://kernel.org/) [![Ubuntu 26.04 LTS](https://img.shields.io/static/v1?label=Ubuntu&message=26.04%20LTS&color=E95420&style=flat-square&labelColor=161B22&logo=ubuntu&logoColor=white)](https://ubuntu.com/) [![Android Cliente](https://img.shields.io/static/v1?label=Android&message=Cliente&color=3DDC84&style=flat-square&labelColor=161B22&logo=android&logoColor=white)](https://www.android.com/) [![OpenSSH Acesso remoto](https://img.shields.io/static/v1?label=OpenSSH&message=Acesso%20remoto&color=527EA2&style=flat-square&labelColor=161B22)](https://www.openssh.com/) [![Docker Engine](https://img.shields.io/static/v1?label=Docker&message=Engine&color=2496ED&style=flat-square&labelColor=161B22&logo=docker&logoColor=white)](https://www.docker.com/) [![Docker Compose](https://img.shields.io/static/v1?label=Docker&message=Compose&color=1D63ED&style=flat-square&labelColor=161B22&logo=docker&logoColor=white)](https://docs.docker.com/compose/) [![Navidrome Áudio](https://img.shields.io/static/v1?label=Navidrome&message=%C3%81udio&color=27AFA2&style=flat-square&labelColor=161B22)](https://www.navidrome.org/) [![Tailscale Acesso](https://img.shields.io/static/v1?label=Tailscale&message=Acesso&color=333333&style=flat-square&labelColor=161B22)](https://tailscale.com/) [![Git Versionamento](https://img.shields.io/static/v1?label=Git&message=Versionamento&color=F05032&style=flat-square&labelColor=161B22&logo=git&logoColor=white)](https://git-scm.com/) [![Bash Shell](https://img.shields.io/static/v1?label=Bash&message=Shell&color=4EAA25&style=flat-square&labelColor=161B22&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/) [![rsync Transferência](https://img.shields.io/static/v1?label=rsync&message=Transfer%C3%AAncia&color=5C677D&style=flat-square&labelColor=161B22)](https://rsync.samba.org/)
 
-[![Beszel Metrics](https://img.shields.io/static/v1?label=Beszel&message=Metrics&color=168A72&style=flat-square&labelColor=161B22)](https://beszel.dev/) [![Dozzle Logs](https://img.shields.io/static/v1?label=Dozzle&message=Logs&color=8266CF&style=flat-square&labelColor=161B22)](https://dozzle.dev/) [![Tailscale Access](https://img.shields.io/static/v1?label=Tailscale&message=Access&color=333333&style=flat-square&labelColor=161B22)](https://tailscale.com/) [![Samba Files](https://img.shields.io/static/v1?label=Samba&message=Files&color=087E8B&style=flat-square&labelColor=161B22)](https://www.samba.org/) [![Syncthing Sync](https://img.shields.io/static/v1?label=Syncthing&message=Sync&color=0891D1&style=flat-square&labelColor=161B22&logo=syncthing&logoColor=white)](https://syncthing.net/) [![Gatus Status](https://img.shields.io/static/v1?label=Gatus&message=Status&color=CD583D&style=flat-square&labelColor=161B22)](https://github.com/TwiN/gatus) [![SFTP Transfer](https://img.shields.io/static/v1?label=SFTP&message=Transfer&color=758C49&style=flat-square&labelColor=161B22)](https://www.openssh.com/)
+**Ferramentas avaliadas ou com configuração pendente**
 
-[![Git Versioning](https://img.shields.io/static/v1?label=Git&message=Versioning&color=F05032&style=flat-square&labelColor=161B22&logo=git&logoColor=white)](https://git-scm.com/) [![Bash Shell](https://img.shields.io/static/v1?label=Bash&message=Shell&color=4EAA25&style=flat-square&labelColor=161B22&logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/) [![rsync Backup](https://img.shields.io/static/v1?label=rsync&message=Backup&color=5C677D&style=flat-square&labelColor=161B22)](https://rsync.samba.org/) [![UFW Firewall](https://img.shields.io/static/v1?label=UFW&message=Firewall&color=B56E28&style=flat-square&labelColor=161B22)](https://wiki.ubuntu.com/UncomplicatedFirewall) [![Fail2ban Defense](https://img.shields.io/static/v1?label=Fail2ban&message=Defense&color=B02E5E&style=flat-square&labelColor=161B22)](https://github.com/fail2ban/fail2ban)
+[![Portainer CE](https://img.shields.io/static/v1?label=Portainer&message=CE&color=13BEF9&style=flat-square&labelColor=161B22)](https://www.portainer.io/) [![Heimdall Painel](https://img.shields.io/static/v1?label=Heimdall&message=Painel&color=9B64C6&style=flat-square&labelColor=161B22)](https://heimdall.site/) [![Uptime Kuma Monitoramento](https://img.shields.io/static/v1?label=Uptime%20Kuma&message=Monitoramento&color=4ABF76&style=flat-square&labelColor=161B22)](https://github.com/louislam/uptime-kuma) [![Pi-hole DNS](https://img.shields.io/static/v1?label=Pi-hole&message=DNS&color=96060C&style=flat-square&labelColor=161B22)](https://pi-hole.net/) [![Apache — servidor HTTP](https://img.shields.io/static/v1?label=Apache&message=Servidor%20HTTP&color=D22128&style=flat-square&labelColor=161B22&logo=apache&logoColor=white)](https://httpd.apache.org/) [![Beszel Métricas](https://img.shields.io/static/v1?label=Beszel&message=M%C3%A9tricas&color=168A72&style=flat-square&labelColor=161B22)](https://beszel.dev/) [![Dozzle Logs](https://img.shields.io/static/v1?label=Dozzle&message=Logs&color=8266CF&style=flat-square&labelColor=161B22)](https://dozzle.dev/) [![Samba Arquivos](https://img.shields.io/static/v1?label=Samba&message=Arquivos&color=087E8B&style=flat-square&labelColor=161B22)](https://www.samba.org/) [![Syncthing Sincronização](https://img.shields.io/static/v1?label=Syncthing&message=Sincroniza%C3%A7%C3%A3o&color=0891D1&style=flat-square&labelColor=161B22&logo=syncthing&logoColor=white)](https://syncthing.net/) [![Gatus Disponibilidade](https://img.shields.io/static/v1?label=Gatus&message=Disponibilidade&color=CD583D&style=flat-square&labelColor=161B22)](https://github.com/TwiN/gatus) [![SFTP Transferência](https://img.shields.io/static/v1?label=SFTP&message=Transfer%C3%AAncia&color=758C49&style=flat-square&labelColor=161B22)](https://www.openssh.com/) [![UFW Firewall](https://img.shields.io/static/v1?label=UFW&message=Firewall&color=B56E28&style=flat-square&labelColor=161B22)](https://wiki.ubuntu.com/UncomplicatedFirewall) [![Fail2ban Proteção](https://img.shields.io/static/v1?label=Fail2ban&message=Prote%C3%A7%C3%A3o&color=B02E5E&style=flat-square&labelColor=161B22)](https://github.com/fail2ban/fail2ban)
 
-*Os badges levam aos projetos oficiais; os estados de instalação estão no [registro de serviços](docs/pt-BR/services/README.md).*
+O [registro de serviços](docs/pt-BR/servicos/README.md) detalha o estado de cada serviço. Usei `rsync` para transferir músicas. O backup e a ativação de UFW e Fail2ban continuam sem confirmação.
+
 </div>
 
 ---
@@ -25,7 +28,7 @@
 
 Eu tinha um notebook Positivo com **2 GB de RAM**, processador Intel Atom e aproximadamente **29 GB de eMMC interno**. Sem servidor dedicado, sem NAS, sem recursos para virtualização pesada e sem espaço para deixar mais um computador ocupando minha mesa.
 
-Em vez de descartar o notebook, instalei **Debian 13 sem ambiente gráfico**, coloquei a máquina em outro cômodo e comecei a executar serviços úteis, administrados remotamente pelo Ubuntu e pelo celular.
+Em vez de descartar o notebook, instalei **Debian 13 sem ambiente gráfico**, coloquei a máquina em outro cômodo e comecei a executar serviços úteis, administrados remotamente por SSH a partir do Ubuntu e acessados também pelo celular.
 
 **O foco do projeto é fazer um hardware extremamente limitado funcionar como servidor de verdade.** Contêineres, música e acesso remoto são experiências para testar essa ideia, não o objetivo final do repositório. Quero conhecer o sistema, medir o custo de cada serviço, resolver problemas, documentar decisões e expandir somente quando os recursos permitirem.
 
@@ -34,92 +37,93 @@ O nome e a identidade visual são inspirados em *JoJolion*. O laboratório come�
 ## Os três dispositivos
 
 | Papel | Equipamento | Especificações principais |
-|---|---|---|
-| **Servidor — Soft & Wet** | Notebook Positivo | Intel Atom x5-Z8350 · **2 GB RAM** · ~29 GB de eMMC · **Debian 13**, sem interface gráfica |
-| **Administração / origem dos arquivos** | Desktop Ubuntu | **Intel Core i7-3770 (4 núcleos / 8 threads)** · **Intel HD Graphics 4000** · ~16 GB RAM · Ubuntu **26.04.1 LTS** · GNOME 50.1 / Wayland |
-| **Cliente remoto** | Samsung Galaxy A34 5G | **6 GB RAM / 128 GB armazenamento** · tela Super AMOLED 6,6″ 120 Hz · 5G · bateria de 5.000 mAh |
+| --- | --- | --- |
+| **Servidor — Soft & Wet** | Notebook Positivo | Intel Atom x5-Z8350 · **2 GB de RAM** · ~29 GB de eMMC · **Debian 13**, sem interface gráfica |
+| **Administração / origem dos arquivos** | Desktop Ubuntu | **Intel Core i7-3770 (4 núcleos / 8 threads)** · **Intel HD Graphics 4000** · ~16 GB de RAM · Ubuntu **26.04.1 LTS** · GNOME 50.1 / Wayland |
+| **Cliente remoto** | Samsung Galaxy A34 5G | **6 GB de RAM / 128 GB de armazenamento** · tela Super AMOLED 6,6″ 120 Hz · 5G · bateria de 5.000 mAh |
 
-O desktop **não é o servidor**: ele serve para acessar por SSH, transferir arquivos e administrar os serviços pelo navegador. O Android é o cliente remoto. O [inventário completo](docs/pt-BR/hardware.md) registra versões, kernel, disco e fontes das especificações.
+O desktop **não é o servidor**: ele serve para acessar por SSH, transferir arquivos e administrar os serviços pelo navegador. O Android é o cliente remoto. O [inventário completo](docs/pt-BR/inventario.md) registra versões, kernel, disco e fontes das especificações.
 
 ## O que eu já fiz
 
 | Marco | Implementação | Evidência |
-|---|---|---|
+| --- | --- | --- |
 | Preparei o sistema mínimo | Debian 13 sem desktop | Servidor operando por SSH em outro cômodo |
 | Configurei administração remota | OpenSSH e ferramentas Linux | Acesso pelo Ubuntu |
-| Adotei contêineres | Docker Engine + Compose | v5.8.0 reportada; um serviço em execução |
-| Testei uma aplicação real | Navidrome e dez músicas locais | Biblioteca e interface web funcionando |
+| Adotei contêineres | Docker Engine + Compose | Compose informou a versão v5.8.0 |
+| Testei uma aplicação real | Navidrome e dez músicas locais | Biblioteca visível e reprodução confirmada no navegador |
 | Testei acesso fora de casa | Tailscale no Debian e Android | Streaming remoto confirmado |
-| Medi os recursos | `df`, `free`, `swapon`, `docker stats` | 23G livres antes dos contêineres; 388 MiB de RAM usados |
+| Medi os recursos | `df`, `free`, `swapon`, `docker stats` | 23 GiB livres antes dos contêineres; 388 MiB de RAM usados |
 
-Até aqui, instalei **um único contêiner de aplicação**. **Portainer, Pi-hole, monitoramento, dashboards e outras ferramentas estão no escopo do laboratório, mas isso não significa que já estejam instalados.** O [registro de serviços](docs/pt-BR/services/README.md) distingue cada estado.
+O Navidrome é o único contêiner de aplicação documentado. O Tailscale roda diretamente no Debian. A expansão está pausada. O [registro de serviços](docs/pt-BR/servicos/README.md) lista as ferramentas avaliadas para uso futuro.
 
 ## Como os equipamentos se conectam
 
-~~~text
-                           REDE DOMÉSTICA
-┌─────────────────────────┐      SSH, rsync, HTTP   ┌──────────────────────────┐
-│ Desktop Ubuntu          │◄──────────────────────►│ Notebook Positivo         │
-│ i7-3770 / GNOME         │                         │ Debian 13 · 2 GB RAM     │
-│ administração + mídias  │                         │ Docker Engine + Compose  │
-└─────────────────────────┘                         │ OpenSSH · Tailscale      │
-                                                    │ somente eMMC interno    │
-                                                    └────────────┬─────────────┘
-                                                                 │ rede privada
-                                                                 ▼
-                                                    ┌──────────────────────────┐
-                                                    │ Samsung Galaxy A34 5G    │
-                                                    │ acesso e reprodução      │
-                                                    └──────────────────────────┘
-~~~
+```text
+Desktop Ubuntu (SSH, rsync, navegador)
+       │ rede doméstica
+       ▼
+Positivo · Debian 13 · eMMC interno
+       ├── OpenSSH
+       ├── Docker Engine + Compose → Navidrome (TCP 4533)
+       └── Tailscale
+              │ rede privada do Tailscale
+              ▼
+       Galaxy A34 5G (reprodução remota)
+```
 
-O acesso remoto testado não exigiu abrir portas no roteador. Entretanto, o Docker publica a porta **4533** em todas as interfaces do Debian. A revisão de segurança continua pendente; o Tailscale, sozinho, não corrige esse ponto.
+O teste de reprodução remota funcionou sem encaminhar portas no roteador. O Docker publica a porta TCP **4533** em todas as interfaces do servidor. Restringir esse acesso na LAN continua pendente.
 
 ## O limite dos recursos
 
 | Medição inicial | Resultado registrado |
-|---|---|
-| Sistema de arquivos raiz antes do primeiro app | 27G total · 2,0G usados · **23G disponíveis** |
+| --- | --- |
+| Sistema de arquivos raiz antes do primeiro app | 27 GiB no total · 2,0 GiB usados · **23 GiB disponíveis** |
 | RAM antes do primeiro contêiner | ~1,8 GiB visíveis · **388 MiB usados** · ~1,4 GiB disponíveis |
 | Swap | Partição de 1,5 GiB · 0 B usados |
-| Primeira leitura do Navidrome | **32,51 MiB RAM** · 15,83% de CPU na inicialização (amostra pontual) |
+| Primeira leitura do Navidrome | **32,51 MiB de RAM** · 15,83% de CPU na inicialização (amostra pontual) |
 | Armazenamento externo | **Nenhum** — uso permanente do Ventoy foi descartado |
 
-O número do contêiner é **uma medição inicial**, não uma média de consumo. Músicas, metadados, imagens e logs disputam espaço com o próprio Debian. Por isso, cada serviço novo precisa justificar o consumo.
+A [primeira leitura do Navidrome](docs/pt-BR/medicoes.md#primeira-inicialização-do-navidrome) foi feita durante a inicialização. Músicas, metadados, imagens de contêiner e logs disputam espaço com o Debian. Por isso, meço o consumo antes de acrescentar serviços.
 
 ## Como reproduzir e estudar
 
-Em um Debian já preparado com Docker Engine e Compose:
+No Debian, use uma conta comum com Git, sudo, Docker Engine e o plugin Compose. Execute uma vez para uma instalação nova em que `~/soft-and-wet` ainda não exista. O comando cria um `.env` local com os IDs da conta proprietária das pastas montadas.
 
-~~~bash
-git clone https://github.com/kayo-willian/soft-and-wet-homelab.git
-cd soft-and-wet-homelab
-mkdir -p data/navidrome music
-printf 'HOST_UID=%s\nHOST_GID=%s\n' "$(id -u)" "$(id -g)" > .env
-sudo docker compose config
-sudo docker compose up -d
+```bash
+git clone https://github.com/kayo-willian/soft-and-wet-homelab.git ~/soft-and-wet &&
+cd ~/soft-and-wet &&
+mkdir -p data/navidrome music &&
+printf 'HOST_UID=%s\nHOST_GID=%s\n' "$(id -u)" "$(id -g)" > .env &&
+sudo docker compose config &&
+sudo docker compose up -d &&
 sudo docker compose ps
-~~~
+```
 
-O procedimento reproduz **o primeiro serviço documentado**, não uma stack inteira fictícia. A pasta original do servidor é `~/soft-and-wet`. O Compose continua igual à primeira configuração funcional; os próximos serviços e ajustes de segurança ainda não foram aplicados.
+Esse procedimento inicia o Navidrome com a [configuração Compose original](compose.yaml). O banco e as músicas ficam no host. O [guia de instalação](docs/pt-BR/instalacao.md) descreve a primeira implantação.
 
 ## Documentação técnica
 
-| Área | Português | English |
-|---|---|---|
-| Navegação | [Índice](docs/pt-BR/README.md) | [Index](docs/README.md) |
-| Equipamentos | [Inventário](docs/pt-BR/hardware.md) | [Hardware inventory](docs/hardware.md) |
-| Arquitetura | [Arquitetura](docs/pt-BR/architecture.md) | [Architecture](docs/architecture.md) |
-| Implantação | [Instalação](docs/pt-BR/installation.md) | [Installation](docs/installation.md) |
-| Serviços | [Registro de serviços](docs/pt-BR/services/README.md) | [Service registry](docs/services/README.md) |
-| Redes | [Redes e acesso remoto](docs/pt-BR/networking.md) | [Networking](docs/networking.md) |
-| Operação | [Operação e backup](docs/pt-BR/operations.md) | [Operations](docs/operations.md) |
-| Segurança | [Limites de segurança](docs/pt-BR/security.md) | [Security](docs/security.md) |
-| Medições | [Medições reais](docs/pt-BR/measurements.md) | [Measurements](docs/measurements.md) |
-| Catálogo | [Coleção Brasil](docs/pt-BR/music-library.md) | [Brasil collection](docs/music-library.md) |
-| Problemas | [Solução de problemas](docs/pt-BR/troubleshooting.md) | [Troubleshooting](docs/troubleshooting.md) |
+| Área | Documento |
+| --- | --- |
+| Navegação | [Índice](docs/pt-BR/README.md) |
+| Equipamentos | [Inventário](docs/pt-BR/inventario.md) |
+| Arquitetura | [Arquitetura](docs/pt-BR/arquitetura.md) |
+| Implantação | [Instalação](docs/pt-BR/instalacao.md) |
+| Serviços | [Registro de serviços](docs/pt-BR/servicos/README.md) |
+| Serviços | [Navidrome](docs/pt-BR/servicos/navidrome.md) |
+| Serviços | [Tailscale](docs/pt-BR/servicos/tailscale.md) |
+| Redes | [Redes e acesso remoto](docs/pt-BR/redes.md) |
+| Operação | [Operação e backup](docs/pt-BR/operacoes.md) |
+| Segurança | [Limites de segurança](docs/pt-BR/seguranca.md) |
+| Medições | [Medições reais](docs/pt-BR/medicoes.md) |
+| Catálogo | [Coleção Brasil](docs/pt-BR/biblioteca-musical.md) |
+| Problemas | [Solução de problemas](docs/pt-BR/solucao-de-problemas.md) |
+| Evolução | [Planejamento](docs/pt-BR/planejamento.md) |
+| Marcos | [Histórico](HISTORICO.pt-BR.md) |
+| Automação | [Scripts](scripts/README.pt-BR.md) |
 
-A documentação explica *por quê*, *quais comandos foram usados*, *o que foi realmente observado* e *o que ainda não foi feito*. Não publico senhas, músicas, bancos, IPs/MACs privados nem dados pessoais da máquina.
+A [documentação de segurança](docs/pt-BR/seguranca.md) explica quais dados locais manter fora do Git.
 
 ## E depois?
 

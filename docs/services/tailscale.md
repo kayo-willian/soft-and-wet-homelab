@@ -1,5 +1,7 @@
 # Tailscale — deployed host service
 
+[Português (Brasil)](../pt-BR/servicos/tailscale.md) · [Documentation](../README.md) · [Home](../../README.md)
+
 ## Purpose
 
 Tailscale provides a private network connection between the Debian home server and a Samsung A34 Android phone, allowing Navidrome to be reached without port-forwarding it on the home router. Tailscale runs directly on **Debian**, not as a Docker container.
@@ -16,7 +18,7 @@ tailscale ip -4
 
 `tailscale up` presented an authentication URL. After both devices were authorized under the same tailnet, Tailscale assigned each one an address in its private address space.
 
-**Private network addresses are intentionally omitted from this public repository.** Store them in local notes that are excluded from Git.
+**Private network addresses are intentionally omitted from this public repository.** Store addresses in local notes outside Git and keep account details and authentication tokens private.
 
 ## Mobile configuration
 
@@ -24,9 +26,9 @@ tailscale ip -4
 2. Turn on the VPN connection on the phone.
 3. Open a compatible Navidrome/Subsonic music client on Android.
 4. Configure its server URL as `http://<DEBIAN_TAILSCALE_IP>:4533` with the Navidrome account credentials.
-5. Test access outside the home Wi-Fi, with Tailscale connected.
+5. Turn off home Wi-Fi and test playback over mobile data with Tailscale connected.
 
-The user confirmed this setup worked. The exact music client installed on Android was not conclusively recorded, so it is not identified as a fact here.
+I later confirmed remote playback on the Samsung A34. I did not record the name of the music client.
 
 ## Operational commands
 
@@ -40,6 +42,9 @@ If mobile access stops working, verify both devices are online in Tailscale, Nav
 
 ## Security note
 
-The Tailscale tunnel protects traffic between tailnet devices, but Navidrome is also currently published by Docker on all host interfaces. Private remote access **does not automatically restrict local-network exposure**; this needs a separate review.
+The Tailscale tunnel protects traffic between tailnet devices, but Navidrome is also currently published by Docker on all host interfaces (`0.0.0.0:4533` and `[::]:4533`). Private remote access **does not automatically restrict local-network exposure**; this needs a separate review.
 
-Official docs: https://tailscale.com/docs/install/linux
+## Official references
+
+- [Tailscale](https://tailscale.com/)
+- [Linux installation](https://tailscale.com/docs/install/linux)
