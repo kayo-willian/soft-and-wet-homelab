@@ -149,6 +149,8 @@ Este ainda é o começo. Os próximos nomes pertencem a uma sequência maior —
 
 ## Escopo e licença
 
-Este é um projeto técnico pessoal — não um produto de software, serviço comercial ou ambiente empresarial. Sem VM, sem pendrive permanente e sem automação de downloads de filmes. Não afirmo backups testados, segurança de produção nem disponibilidade garantida.
+Este é um projeto técnico pessoal, não um produto de software, serviço comercial ou ambiente corporativo. Não utiliza máquinas virtuais, unidades de armazenamento removíveis permanentes ou automação de downloads de filmes, nem oferece garantias de disponibilidade, backups validados ou exposição pública devidamente protegida.
 
-A [licença MIT](LICENSE) cobre a documentação e as configurações originais do repositório, **não** programas de terceiros ou músicas.
+O OpenAI Codex contribuiu exclusivamente com a revisão, tradução, organização e consistência da documentação. Toda a infraestrutura física, implantação dos serviços, configuração dos sistemas e realização dos testes práticos foram executadas por mim.
+
+A [licença MIT](LICENSE) abrange a documentação e as configurações originais deste repositório, não os softwares de terceiros ou arquivos musicais.
