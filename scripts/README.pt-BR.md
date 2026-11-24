@@ -1,6 +1,6 @@
 # Scripts
 
-[English](README.md) · [Documentação](../docs/pt-BR/README.md)
+[English](README.md) · [Documentação](../docs/pt-BR/README.md) · [Início](../README.pt-BR.md)
 
 Não há scripts próprios de automação implementados no estágio inicial do Soft & Wet.
 

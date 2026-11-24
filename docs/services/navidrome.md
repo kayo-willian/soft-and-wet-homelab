@@ -1,5 +1,7 @@
 # Navidrome — deployed service
 
+[Português (Brasil)](../pt-BR/servicos/navidrome.md) · [Documentation](../README.md) · [Home](../../README.md)
+
 ## Why it is here
 
 Navidrome is the first useful application in the lab: it indexes locally stored music and makes it available via browser and a compatible Android client. The server does not download tracks automatically. A small curated library avoids uncontrolled storage growth.
@@ -37,7 +39,7 @@ The `.env` contains `HOST_UID` and `HOST_GID`, populated using `id -u` and `id -
 | Host path | Container path | Purpose |
 | --- | --- | --- |
 | `./data/navidrome` | `/data` | Writable database and cache |
-| `./music` | `/music:ro` | Read-only music library |
+| `./music` | `/music` | Read-only music library |
 
 The project directory and music files must be readable by the configured user, and the data directory must be writable. Music stays outside Git.
 
@@ -50,15 +52,17 @@ The project directory and music files must be readable by the configured user, a
 5. Some tracks had missing album tags and appeared under **Unknown Album**. The Songs view showed the titles correctly; album metadata was not altered just to change the tile label.
 6. Mobile access through the private Tailscale connection subsequently worked.
 
-> The user's specific administrator credentials are not documented or published. The precise Android music-client application was not independently recorded in a terminal log.
+The administrator credentials are private. I confirmed mobile playback separately from the terminal record and did not record the client name.
 
 ## File transfer from Ubuntu
 
-Files were organized in the Ubuntu folder `~/Músicas/Brasil/` and transferred over SSH to Debian:
+On Ubuntu, set the example account and documentation-only IP below to your Debian login and LAN address. The remote path is relative to that account’s home directory. Both machines need `rsync`.
 
 ```bash
+DEBIAN_USER=homelab
+DEBIAN_HOST=192.0.2.10
 rsync -avh --progress "$HOME/Músicas/Brasil/" \
-  kayo@<DEBIAN_LAN_IP>:/home/kayo/soft-and-wet/music/Brasil/
+  "${DEBIAN_USER}@${DEBIAN_HOST}:soft-and-wet/music/Brasil/"
 ```
 
 The server recognizes the files during its next scan (`ND_SCANSCHEDULE=1h`). A manual scan can be initiated from the Navidrome UI, if available in the installed version. Check index status and logs rather than assuming the scan succeeded.
@@ -74,10 +78,13 @@ du -sh ~/soft-and-wet/music ~/soft-and-wet/data/navidrome
 df -h /
 ```
 
-Do not use `docker compose down -v` without understanding what it will delete. The bind-mounted data lives under the host directory and is not meant for GitHub.
+The `-v` option to `docker compose down` can remove project-managed named volumes and attached anonymous volumes. This configuration stores the library and database in host directories (bind mounts).
 
 ## Status
 
-**Deployed and tested.** A large music library, full backup/recovery test, and hardened network binding have **not** been completed.
+**Deployed and tested.** The lab has one application container and a small library. Long-term measurements, an independent backup and restore test, and restricted port bindings are still pending.
 
-Official docs: https://www.navidrome.org/docs/installation/docker/
+## Official references
+
+- [Navidrome](https://www.navidrome.org/)
+- [Docker installation](https://www.navidrome.org/docs/installation/docker/)

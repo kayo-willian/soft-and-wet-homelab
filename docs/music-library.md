@@ -1,5 +1,7 @@
 # Music library — Brasil
 
+[Português (Brasil)](pt-BR/biblioteca-musical.md) · [Documentation](README.md) · [Home](../README.md)
+
 ## Initial selection
 
 The initial collection contains ten tracks selected manually from a Spotify playlist named **Brasil**. The playlist mixes Brazilian popular music, samba, bossa nova and related styles. Spotify itself is **not** the file source for Navidrome; the server indexes music files transferred to Debian. The specific download provenance and licensing of individual files were not recorded.
@@ -17,7 +19,7 @@ The initial collection contains ten tracks selected manually from a Spotify play
 | 09 | Bis | Arthur Verocai; Azymuth |
 | 10 | Corre pra Ver | Joca Perpignan; Denise Reis |
 
-This table is a catalog of the user's **selection order**, not proof of an album, release year, bitrate or audio codec. The original metadata for several files displayed **Unknown Album**; the correct album edition was not verified, so album names and years are intentionally omitted.
+This table is a catalog of the **selection order**, not proof of an album, release year, bitrate or audio codec. The original metadata for several files displayed **Unknown Album**; the correct album edition was not verified, so album names and years are intentionally omitted.
 
 ## File organization
 
@@ -40,13 +42,15 @@ A numbered filename convention was recommended, for example:
 
 The extensions here are **examples**; keep each actual downloaded file's original format. The exact final disk filenames have not been audited.
 
-## Transfer used
+## Reproducing the transfer
 
-Run on the **Ubuntu** desktop, not on Debian:
+On Ubuntu, set the example account and documentation-only IP below to your Debian login and LAN address. The remote path is relative to that account’s home directory. Both machines need `rsync`.
 
 ```bash
+DEBIAN_USER=homelab
+DEBIAN_HOST=192.0.2.10
 rsync -avh --progress "$HOME/Músicas/Brasil/" \
-  kayo@<DEBIAN_LAN_IP>:/home/kayo/soft-and-wet/music/Brasil/
+  "${DEBIAN_USER}@${DEBIAN_HOST}:soft-and-wet/music/Brasil/"
 ```
 
 `rsync` leaves source files on Ubuntu. Repeating this command updates files at the same path; files renamed or moved at the source may leave old copies on the server unless the destination is reviewed separately.

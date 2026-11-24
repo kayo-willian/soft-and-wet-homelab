@@ -1,37 +1,39 @@
 # The next names
 
-[Português](pt-BR/roadmap.md) · [Documentation](README.md)
+[Português (Brasil)](pt-BR/planejamento.md) · [Documentation](README.md) · [Home](../README.md)
 
 The **Soft & Wet** homelab is only the beginning of a longer, intentionally open-ended sequence. The project identity borrows the dramatic sense of progression from *JoJo's Bizarre Adventure*; what follows is not an implementation plan published ahead of time.
 
+Infrastructure expansion is currently paused.
+
 <div align="center">
 
-### 01 — SOFT & WET
+## 01 — SOFT & WET
 *The experiment has begun.*
 
 ↓
 
-### 02 — PLUNDER
+## 02 — PLUNDER
 *?*
 
 ↓
 
-### 03 — SOFT & WET · V2
+## 03 — SOFT & WET · V2
 *?*
 
 ↓
 
-### 04 — SOFT & WET · V3
+## 04 — SOFT & WET · V3
 *?*
 
 ↓
 
-### 05 — GO BEYOND
+## 05 — GO BEYOND
 *?*
 
 ↓
 
-### 06 — MADE IN HEAVEN
+## 06 — MADE IN HEAVEN
 *?*
 
 </div>

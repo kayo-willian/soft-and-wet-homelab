@@ -1,8 +1,8 @@
 # Troubleshooting, alternatives and decisions
 
-[Português](pt-BR/troubleshooting.md) · [Documentation](README.md)
+[Português (Brasil)](pt-BR/solucao-de-problemas.md) · [Documentation](README.md) · [Home](../README.md)
 
-This log distinguishes **encountered problems**, **discussed alternatives**, **successful checks**, and **open risks**. It is not an invented incident history. Terminal evidence exists only for some steps.
+This log distinguishes **encountered problems**, **discussed alternatives**, **successful checks**, and **open risks**. Terminal evidence exists only for some steps.
 
 ## A. Problems actually encountered
 
@@ -10,15 +10,15 @@ This log distinguishes **encountered problems**, **discussed alternatives**, **s
 
 - **Observed:** `swapon` was not available by its short name in the regular user's shell.
 - **Attempt / fix:** invoked `sudo /usr/sbin/swapon --show`, which worked.
-- **Result:** `/dev/mmcblk2p3` is a **1.5 GB swap partition**, 0 used at the time.
+- **Result:** `/dev/mmcblk2p3` is a **1.5 GiB swap partition**, 0 used at the time.
 - **Alternatives considered:** increasing total swap to 4 GB, adding a 2.5 GB swapfile, zram.
 - **Decision:** **no partition resize, swapfile or zram was applied**; measure workload first.
 
-~~~bash
+```bash
 sudo /usr/sbin/swapon --show
 cat /proc/swaps
 free -h
-~~~
+```
 
 ### T02 — Navidrome shows `Unknown Album`
 
@@ -33,7 +33,7 @@ free -h
 
 - **Observed:** there is no official Navidrome-branded Android APK in the main Navidrome releases.
 - **Options considered:** third-party Subsonic/OpenSubsonic clients, including Symfonium, Substreamer, Ultrasonic, Navis and Chora.
-- **Result:** user confirmed a compatible app worked on the Samsung A34, including remote playback.
+- **Result:** I later confirmed that a compatible app worked on the Samsung A34, including remote playback.
 - **Evidence limit:** the exact installed third-party client was **not conclusively recorded**, so no specific app is claimed as deployed.
 - **Correct configuration:** use the Debian tailnet IP on port 4533, not the LAN IP when outside home Wi-Fi.
 
@@ -46,17 +46,17 @@ free -h
 
 ### T05 — Folder versus album versus playlist
 
-- **Observed:** folder `music/Brasil/` contains ten numbered files; Navidrome album view does not automatically treat this directory as one album.
+- **Observed:** folder `music/Brasil/` contains the ten selected tracks; Navidrome album view does not automatically treat this directory as one album.
 - **Explanation:** the media library primarily indexes embedded music tags. Folder naming does not determine the album tag.
-- **Decision:** view tracks in **Songs**. A named Navidrome playlist can be created separately; we do not claim that a playlist export or automation exists.
+- **Decision:** view tracks in **Songs**. A named Navidrome playlist can be created separately; no playlist export or automation was recorded.
 
 ## B. Design alternatives explored (not implementation failures)
 
 | Topic | Option considered | Decision | Why |
-|---|---|---|---|
-| Storage | Ventoy USB drive (~51 GB free) | **Excluded** from permanent setup | User did not want removable media left attached |
+| --- | --- | --- | --- |
+| Storage | Ventoy USB drive (~51 GB free) | **Excluded** from permanent setup | I wanted to keep removable media unplugged |
 | Storage | Internal eMMC | **Used** | Simple, but small and a single point of failure |
-| Swap | Resize 1.5 GB swap to 4 GB | **Not done** | No observed memory pressure; partition modification risk |
+| Swap | Resize 1.5 GiB swap to 4 GB | **Not done** | No observed memory pressure; partition modification risk |
 | Swap | Additional swapfile or zram | **Not done** | Reconsider after real load testing |
 | Web server | Apache installed via Debian tasksel | **Not installed** | No current use; optional future container exercise |
 | Media | Plex/Jellyfin | **Deferred** | Music-only focus, limited resources |
@@ -75,22 +75,23 @@ free -h
 
 ### Navidrome container not reachable
 
-~~~bash
+```bash
 cd ~/soft-and-wet
 sudo docker compose ps
 sudo docker compose logs --tail=100 navidrome
 sudo docker stats --no-stream
-~~~
+```
 
 Check the web UI at `http://<DEBIAN_LAN_IP>:4533` locally. If remote, use `http://<DEBIAN_TAILSCALE_IP>:4533`; do not forward the router's TCP 4533.
 
 ### Imported music not shown
 
-~~~bash
-ls -lh ~/soft-and-wet/music/Brasil/
-du -sh ~/soft-and-wet/music
+```bash
+cd ~/soft-and-wet
+ls -lh music/Brasil/
+du -sh music
 sudo docker compose logs --tail=100 navidrome
-~~~
+```
 
 Verify the audio files are readable by the configured UID/GID, supported, and scanned. The installed Compose configured `ND_SCANSCHEDULE: 1h`.
 
@@ -100,24 +101,24 @@ Verify the audio files are readable by the configured UID/GID, supported, and sc
 
 ### Low storage or high memory pressure
 
-~~~bash
+```bash
 df -h /
 free -h
 sudo docker system df
 sudo docker stats --no-stream
 sudo /usr/sbin/swapon --show
-~~~
+```
 
 The original 32.51 MiB Navidrome reading was a **startup sample**, not stable consumption under a large library.
 
 ### SSH or Tailscale unavailable
 
-~~~bash
+```bash
 sudo systemctl status ssh docker tailscaled --no-pager
 tailscale status
 tailscale ip -4
 hostname -I
-~~~
+```
 
 Do not assume name resolution for `debian` works on every LAN. Use the actual address when necessary.
 
