@@ -151,4 +151,6 @@ This is still the beginning. The public names belong to a larger, deliberately u
 
 This is a personal technical project—not a software product, commercial service or enterprise environment. No VM, no permanent removable drive, no movie download automation, and no claims of tested backups, hardened public exposure or availability guarantees.
 
+OpenAI Codex contributed exclusively to documentation review, translation, organization and consistency. All physical infrastructure, service deployment, system configuration and practical testing were carried out by me.
+
 The [MIT license](LICENSE) covers this repository's original documentation and configuration, not third-party software or music files.
