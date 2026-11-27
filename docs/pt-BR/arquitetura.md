@@ -60,6 +60,5 @@ Há **um único contêiner de aplicação**, `navidrome`, na rede `soft-and-wet_
 - A pouca memória e o espaço limitado no eMMC restringem a biblioteca. O projeto dispensa VMs, disco externo permanente e automação de filmes.
 - Cada novo serviço exige medição de RAM e armazenamento.
 - Sem alta disponibilidade ou comprovação de backup externo.
-- A publicação atual da porta 4533 em todas as interfaces ainda precisa ser revisada.
 
-Veja [medições](medicoes.md), [segurança](seguranca.md) e [rede](redes.md).
+O Docker publica a porta TCP 4533 em todas as interfaces do host. Consulte [rede](redes.md), [medições](medicoes.md) e [segurança](seguranca.md) para a configuração registrada, o consumo de recursos e as questões em aberto.

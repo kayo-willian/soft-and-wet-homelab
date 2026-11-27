@@ -24,11 +24,20 @@ The [Compose file](../compose.yaml) publishes TCP 4533 on all host interfaces. T
 
 ## Before publishing manually
 
+Keep these items outside the repository:
+
+- `.env`, passwords, API tokens, private keys and Tailscale account details.
+- `data/`, `music/`, `secrets/`, `backups/`, `local/` and database files, including SQLite databases.
+- Local account names, actual device and IP lists, and other sensitive home-network details.
+- MP3/FLAC audio files and raw logs.
+
+Review the staged files before publishing:
+
 ```bash
 git status --short
 git diff --cached --name-only
 ```
 
-Do not publish: `.env`, `data/`, `music/`, `secrets/`, `local/`, `backups/`, private IP/device lists, credentials, private keys, Tailscale account details, API tokens, database files, audio files or raw logs. **GitHub's browser upload interface may not protect you in the same way as a local `git add` honoring `.gitignore`; select files deliberately.**
+When uploading files through GitHub's web interface, select each file deliberately. Local `.gitignore` rules do not protect a browser upload.
 
-This personal lab has no formally validated production security controls. For this single-host lab, keep repository docs free of usernames/passwords and avoid storing unnecessary details about the home network.
+This personal lab has no formally validated production security controls.

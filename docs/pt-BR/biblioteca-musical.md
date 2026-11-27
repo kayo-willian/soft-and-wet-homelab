@@ -57,8 +57,8 @@ O `rsync` mantém a origem no Ubuntu e atualiza arquivos no mesmo caminho no Deb
 
 ## Apresentação no Navidrome
 
-A tela de álbuns usa o campo **album** dos metadados internos, não o nome da pasta ou da playlist. Algumas músicas mostraram `Unknown Album`. Uma tentativa com MusicBrainz Picard não resolveu a apresentação; foi decidido usar a seção **Músicas (Songs)**, mantendo os metadados de álbum não verificados. Uma playlist com o nome Brasil dentro do Navidrome é independente da pasta.
+A tela de álbuns usa o campo **album** dos metadados internos, independentemente do nome do arquivo MP3, da pasta ou da playlist. Algumas músicas mostraram `Unknown Album`. Uma tentativa com MusicBrainz Picard não resolveu a apresentação; foi decidido usar a seção **Músicas (Songs)**, mantendo os metadados de álbum não verificados. Uma playlist com o nome Brasil dentro do Navidrome é independente da pasta.
 
 ## Publicação
 
-Somente o catálogo de texto é público. Não adicionar áudio, capas extraídas, credenciais do Spotify, banco ou cache do Navidrome.
+Somente o catálogo de texto é público. Não adicionar áudio, capas, credenciais do Spotify, bancos de usuários, cache do Navidrome ou mídia bruta.

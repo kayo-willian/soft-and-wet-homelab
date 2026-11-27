@@ -57,8 +57,8 @@ rsync -avh --progress "$HOME/Músicas/Brasil/" \
 
 ## Navidrome display
 
-Navidrome's album view uses embedded **album tags**, not the MP3 filename or playlist name. Missing album tags produced **Unknown Album**. A Picard metadata attempt did not solve the display issue; the decision was to keep the music and use the **Songs** view. A real Navidrome playlist named Brasil can be curated independently from album tags.
+Navidrome's album view uses embedded **album tags**, not the MP3 filename, directory or playlist name. Missing album tags produced **Unknown Album**. A Picard metadata attempt did not solve the display issue; the decision was to keep the music and use the **Songs** view. A real Navidrome playlist named Brasil can be curated independently from album tags.
 
 ## Publication boundary
 
-Only this text catalog is public. Do not add audio files, album-art downloads, Spotify credentials, user databases, or raw media to Git.
+Only this text catalog is public. Do not add audio files, album-art downloads, Spotify credentials, user databases, the Navidrome cache, or raw media to Git.

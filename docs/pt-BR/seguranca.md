@@ -26,9 +26,9 @@ O [arquivo Compose](../../compose.yaml) publica a porta TCP 4533 em todas as int
 
 Deixar fora do repositório:
 
-- `.env`, senhas, tokens, chaves privadas e dados da conta Tailscale.
-- `data/`, `music/`, `secrets/`, `backups/`, `local/` e bancos SQLite.
-- Nomes de contas locais, listas reais de endereços e informações sensíveis da rede.
+- `.env`, senhas, tokens de API, chaves privadas e dados da conta Tailscale.
+- `data/`, `music/`, `secrets/`, `backups/`, `local/` e arquivos de bancos de dados, incluindo SQLite.
+- Nomes de contas locais, listas reais de dispositivos e endereços IP e informações sensíveis da rede.
 - Arquivos MP3/FLAC e logs brutos.
 
 Antes de publicar via Git:
